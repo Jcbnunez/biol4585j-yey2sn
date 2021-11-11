@@ -503,12 +503,16 @@ As we continue to code our analysis, you will soon notice how our code starts gr
 ### Tip 1: use your spaces strategically
 ```
 iris %>%    
-mutate(isFavorite = case_when(	Species == "versicolor" ~ "Yes", 
-		 					   	Species != "versicolor" ~ "No",)  ) %>%
+mutate(isFavorite = case_when(	
+
+Species == "versicolor" ~ "Yes", 
+Species != "versicolor" ~ "No",)  ) %>%
+
 group_by(isFavorite) %>%
-summarize(  n(), 
-			mean(Sepal.Length), 
-			sd(Sepal.Length) )
+summarize(  
+n(), 
+mean(Sepal.Length), 
+sd(Sepal.Length) )
 ```
 Notice that **this code is exactly the same as the one above** it simply uses spacing as a way to make the code more legible and easy to follow. 
 
@@ -516,12 +520,16 @@ Notice that **this code is exactly the same as the one above** it simply uses sp
 Another way to make both the code and the output easier to add your own names to the summarize function. Right now, we are simply using the default behavior in that outputs the names of the functions as the column names. This looks like   `'n()'` `'mean(Sepal.Length)'` `'sd(Sepal.Length)'` . This can get clunky really quickly, so we can provide R our own output names. See the code below
 ```
 iris %>%    
-mutate(isFavorite = case_when(	Species == "versicolor" ~ "Yes", 
-		 					   	Species != "versicolor" ~ "No",)  ) %>%
+mutate(isFavorite = case_when(	
+
+Species == "versicolor" ~ "Yes", 
+Species != "versicolor" ~ "No",)  ) %>%
+
 group_by(isFavorite) %>%
-summarize(  N = n(),                 # Notice we have added the name N =
-			MEAN = mean(Sepal.Length),     # Notice we have added the name MEAN =
-			SD = sd(Sepal.Length) )        # Notice we have added the name SD =
+summarize(  
+N = n(),                       # Notice we have added the name N =
+MEAN = mean(Sepal.Length),     # Notice we have added the name MEAN =
+SD = sd(Sepal.Length) )        # Notice we have added the name SD =
 
 # This outputs a much neater output:
 #  isFavorite   N  MEAN    SD
