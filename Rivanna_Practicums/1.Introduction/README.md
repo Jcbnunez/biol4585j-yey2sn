@@ -4,7 +4,7 @@
 
 ## Part 1. How to log into Rivanna. 
 
-1. Type https://_rivanna_-_portal_._hpc_.virginia.edu [click here](https://rivanna-portal.hpc.virginia.edu) into your web browser. This will automatically trigger a UVA authentication step. Input your UVA credentials to enter the super-computer GUI.
+1. Type [https://_rivanna_-_portal_._hpc_.virginia.edu](https://rivanna-portal.hpc.virginia.edu) into your web browser. This will automatically trigger a UVA authentication step. Input your UVA credentials to enter the super-computer GUI.
 2. Once inside you will see a "Message of the day board". Go to the top bar and search for the option "**Interactive Apps**".
 3. Once you click **Interactive Apps** a drop down menu will appear. Click on the option names **Desktop**. 
 4. Clicking on Desktop will give you the option to create an interactive session with the supercomputer. Before you can do that you need to tell the supercomputer what are the parameters of your interactive session. These are:
