@@ -553,4 +553,4 @@ The R library _ggplot_ is perhaps on of the most famous libraries among data sci
 #### Ggplot works like a canvas
 As a graphical tool, ggplot has rules of its own that we need to understand. Any ggplot figure is built using three sets of components: 1. Data + 2. Aesthetic map + 3. Elements. Here is an example: 
 
-![ggplot basics](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/ggplot_basics.png)
+![ggplot basics](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/ggplot_basics.wb.png)
