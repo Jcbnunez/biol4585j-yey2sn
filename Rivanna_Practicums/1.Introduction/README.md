@@ -117,10 +117,10 @@ Now lets copy a file from the class folder to our folder
 cp /project/biol4585j-yey2sn/Files/Day_1/Mus.sequence.fasta ./
 ```
 In this case the command is "cp". cp takes 2 arguments:
-1. /project/biol4585j-yey2sn/Files/Day_1/Mus.sequence.fasta ... and 
-2. ./
+1. --> /project/biol4585j-yey2sn/Files/Day_1/Mus.sequence.fasta ... and 
+2. --> ./
 
---- The first arg  "/project/biol45...etc" is the file that you want to copy, and the second "./" is where you want to copy it. In **Rivanna the term "./" simply means "here"...** read that as "./" means whenever I happen to be (think of pwd...).
+The first argument,  "/project/biol45...etc" is the file that you want to copy, and the second "./" is where you want to copy it. In **Rivanna the term "./" simply means "here"...** read that as "./" means whenever I happen to be (think of pwd...).
 
 ### Check if your file is in the folder
 Type:
