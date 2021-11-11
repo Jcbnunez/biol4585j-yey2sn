@@ -377,7 +377,7 @@ Lets look at our new object:
 ```
 newIris %>% head
 ```
-### PROTIP: Making your code look pretty and tidy.
+### PROTIP: you can make your code look pretty and tidy :)
 You make your code look pretty by using the "enter" key (formally called the carriage return) in between your pipes and your pipe save. Returns always go after the pipe or pipe termination symbol.
 Example:
 ```
@@ -498,7 +498,9 @@ summarize(n(), mean(Sepal.Length), sd(Sepal.Length) )
 # Yes           50                 5.94              0.516
 ```
 ### Can we make this code prettier and neater? 
-As we continue to code our analysis, you will soon notice how our code starts growing and growing. And it may turn into a chunk of text that is difficult to keep track of. Earlier on we learned a trick  where you can use "enter" after pipes to stream-line the code. In addition to pipes (`%>%` and `->`), you can use this trick also for commas `,`.  Applying this trick to our code makes now look more organized:
+As we continue to code our analysis, you will soon notice how our code starts growing and growing. And it may turn into a chunk of text that is difficult to keep track of. Earlier on we learned a trick  where you can use "enter" after pipes to stream-line the code. In addition to pipes (`%>%` and `->`), you can use this trick also for commas `,` and other elements within functions.  Applying this trick to our code makes now look more organized:
+
+**ITS YOUR CHOICE:** if this process of tidying up your code is too confusing or if it has the tendency to break your code, you can chose not to use it. Use as much or as little tidiness as you like. **Our priority is simply to make our code work!!**
 
 ### Tip 1: use your spaces strategically
 ```
@@ -520,11 +522,7 @@ Notice that **this code is exactly the same as the one above** it simply uses sp
 Another way to make both the code and the output easier to add your own names to the summarize function. Right now, we are simply using the default behavior in that outputs the names of the functions as the column names. This looks like   `'n()'` `'mean(Sepal.Length)'` `'sd(Sepal.Length)'` . This can get clunky really quickly, so we can provide R our own output names. See the code below
 ```
 iris %>%    
-mutate(isFavorite = case_when(	
-
-Species == "versicolor" ~ "Yes", 
-Species != "versicolor" ~ "No",)  ) %>%
-
+mutate(isFavorite = case_when(Species == "versicolor" ~ "Yes", Species != "versicolor" ~ "No",)) %>%
 group_by(isFavorite) %>%
 summarize(  
 N = n(),                       # Notice we have added the name N =
@@ -537,3 +535,22 @@ SD = sd(Sepal.Length) )        # Notice we have added the name SD =
 # No           100  5.80 0.945
 # Yes           50  5.94 0.516
 ```
+
+## Visualizing the data using _ggplot_
+The last exercise we hope to accomplish is to make a graph showcasing our analysis. Data visualization is a fundamental part of genomics and data science. 
+First thing we need to do is to save our summarize pipe into a new object. Lets call it `MyFavoriteIrisFlowers` 
+```
+iris %>%    
+mutate(isFavorite = case_when(Species == "versicolor" ~ "Yes", Species != "versicolor" ~ "No",)) %>%
+group_by(isFavorite) %>%
+summarize( N = n(), MEAN = mean(Sepal.Length), SD = sd(Sepal.Length) ) ->
+MyFavoriteIrisFlowers   
+```
+All the data that we need is now consolidated in `MyFavoriteIrisFlowers`. 
+### Using ggplot to visualize data.
+The R library _ggplot_ is perhaps on of the most famous libraries among data scientist. Ggplot provides a unified set of graphical tools to visualize your data. 
+
+#### Ggplot works like a canvas
+As a graphical tool, ggplot has rules of its own that we need to understand. Any ggplot figure is built using three sets of components: 1. Data + 2. Aesthetic map + 3. Elements. Here is an example: 
+
+![ggplot basics](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/ggplot_basics.png)
