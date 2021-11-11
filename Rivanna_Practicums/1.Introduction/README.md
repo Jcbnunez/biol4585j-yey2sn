@@ -378,12 +378,66 @@ Lets look at our new object:
 newIris %>% head
 ```
 ### PROTIP: Making your code look pretty and tidy.
-You make your code look pretty by using the "enter" key (formally called the carriage return) in between your pipes and your pipe terminations. Returns always go after the pipe or pipe termination symbol.
+You make your code look pretty by using the "enter" key (formally called the carriage return) in between your pipes and your pipe save. Returns always go after the pipe or pipe termination symbol.
 Example:
 ```
-iris %>%    #Notice how you can press enter after the pipe
-select(Sepal.Length, Species) ->    #Notice how you can press enter after the pipe terminator
+iris %>%    
+select(Sepal.Length, Species) -> 
 newIris
 
+#Notice how you can press enter after the pipe "%>%" and the pipe save "->"
 #isn't coding just wonderful![?] .... I think so anyway :)
 ```
+
+### How do we filter data by observations?
+Lets say you are interested in just some subset of observations. For example, you only want to retain only observations  in which `Sepal.Width ` is larger than 3.1. We can do this easily with `filter`
+```
+iris %>%    
+filter(Sepal.Width > 3.1) 
+
+# Notice that in this case > is being use in it orginal form as the logical operator greater than!
+# Note: How many times have we encountered > having differnt meanings? 
+# A lot..
+# why computer programmers are obsessed with the > symbol is a mistery!
+```
+*Quiz question: how many observation have Sepal.Width > 3.1* **X points** (hint you can pipe the code to dim `%>% dim`)
+*Quiz question: how many observation have Sepal.Width > 3.4* **X points** 
+*Quiz question: how many observation have Sepal.Width < 2.7* **X points** 
+
+**Conditional logical operators in R** *your most powerful tools for data mining!* 
+
+| Arithmetic Operator    Description                 	|
+|-----------------------------------------	|
+| +        addition                       	|
+| -        subtraction                    	|
+| *        multiplication                 	|
+| /        division                       	|
+| ^or**    exponentiation                 	|
+| x%%y    modulus    (x mod y) 5%%2 is 1  	|
+| x%/%y    integer    division 5%/%2 is 2 	|
+
+###
+|Logic Operator     Description        	|
+|---------------------------------	|
+| <     less than                 	|
+| <=     less than or equal to    	|
+| >     greater than              	|
+| >=     greater than or equal to 	|
+| ==     exactly equal to         	|
+| !=     not equal to             	|
+| !x     Not x                    	|
+| x \| y     x OR y               	|
+| x & y     x AND y               	|
+| isTRUE(x)     test if X is TRUE 	|
+
+### How do we filter for multiple conditions?
+```
+iris %>%    
+filter(Sepal.Width > 3.1 & Petal.Width < 1.5 & Species != "setosa") 
+
+# In English we would say:
+#filter Sepal.Width > 3.1 AND Petal.Width < 1.5 AND Species IS NOT "setosa"
+```
+*Quiz question: how many observation have Sepal.Width > 3.3 and Petal.Width < 0.5* **X points** 
+
+## Adding new columns to my data object 
