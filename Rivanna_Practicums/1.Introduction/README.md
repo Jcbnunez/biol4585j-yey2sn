@@ -33,6 +33,9 @@ Lets type our first command:
 ```{sh}
 echo "hello world"
 ```
+
+#### Supercomputers are **CASE SENSITIVE**. echo =/= Echo =/= ECHO.
+
 In this case the command **echo** will tell the computer to, literally, echo whatever is inside the quotes. Give it a try.  --- can you make it echo "hello << your name >>"?
 
 ### Understanding your location in the supercomputer
