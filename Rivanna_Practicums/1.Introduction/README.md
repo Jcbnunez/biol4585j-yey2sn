@@ -568,7 +568,9 @@ geom_point(size = 3)
 
 #this will generate a "plot" point showing our data. geom_point only requires x and y data.
 ```
+
 ![geom_point only](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/point_only.png)
+
 This plot shows the point estimates of our `summarize(MEAN = ...)` analysis. But always remember that in statisitcs, point estimates are always associated with variance (i.e., a measure of data dispersion ). In our case we can some measure of dispersion by including our estimates of standard deviation  `summarize(SD = ...)`. We can do this using the element known as `geom_errorbar()`. This element requires, on top of `x` and `y`, two additional arguments `ymin` and `ymax`. We need to add these to the **aesthetic map**.
 
 ```
@@ -577,5 +579,7 @@ ggplot(aes(x=isFavorite, y=MEAN, ymin = MEAN-SD, ymax = MEAN+SD)) +
 geom_point(size = 3) +
 geom_errorbar(width = 0.5)
 ```
+
 ![geom_point only](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/point_plusError_only.png)
+
 wow! look at that! our point estimates are not very different after all!
