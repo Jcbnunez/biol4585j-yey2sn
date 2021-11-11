@@ -103,7 +103,7 @@ mkdir my_first_folder
 ```
 In this case the command is **mkdir** and you are creating a folder named **my_first_folder**. Also, notice that spaces " " will not be used used as part of our code. Instead we will replace all spaces with "_" symbols. So instead of "my_first_folder" we must write "my_first_folder". This is **KEY** becuase spaces " " can mess up code real bad! and we dont want that.. do we?
  
-## Part 3. Exploring and coping files around
+## Part 3. Exploring and copying files around
 
 ### Move into your new folder
 We first want to move into our new folder  "my_first_folder":
