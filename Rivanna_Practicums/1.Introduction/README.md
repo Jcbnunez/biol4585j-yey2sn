@@ -472,7 +472,7 @@ iris %>%
 mutate(isFavorite = case_when(Species == "versicolor" ~ "Yes", Species != "versicolor" ~ "No",)) %>%
 group_by(isFavorite) 
 ```
-**what is going on here??** So far, not much has happened in the front-end. In the back-end, however, as long as you continue to pipe the `group_by` function, R will group the data according to the contents of the  `isFavorite ` column. Lets see what we can do with this:
+**what is going on here??** So far, not much has happened in the front-end. In the back-end, however, as long as you continue to pipe the `group_by` function, R will group the data according to the contents of the  `isFavorite ` column. It is important to know that the grouping variable has to exists in the data, for example, if you use `select()` to pick a couple columns and by doing this you end up removing your grouping column, `group_by()` wont work!. So be careful when you code. 
 
 ### Count the number of species which are, and are not, my favorites:
 We can count the number of observations which have Yes or No in the `isFavorite` by nesting two functions `summarize()` and `n()`.  **summarize** is a powerful function that will apply any function to your data. However, by this is not done globally, instead this is done within the groups of the grouping variable (for example, all the Yes, and all the No). On the other hand `n()`, the function inside, will count the number of observation in each group.  
@@ -564,9 +564,14 @@ Lets see an example:
 ```
 MyFavoriteIrisFlowers %>%
 ggplot(aes(x=isFavorite, y=MEAN)) +
-geom_point(size = 3)
+geom_point(size = 3) -> just_point
 
 #this will generate a "plot" point showing our data. geom_point only requires x and y data.
+
+#save your plot
+ggsave(just_point, file = "just_point.pdf", width = 6, height = 4)
+
+#check your plot using your browser GUI
 ```
 
 ![geom_point only](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/point_only.png)
@@ -577,9 +582,27 @@ This plot shows the point estimates of our `summarize(MEAN = ...)` analysis. But
 MyFavoriteIrisFlowers %>%
 ggplot(aes(x=isFavorite, y=MEAN, ymin = MEAN-SD, ymax = MEAN+SD)) +
 geom_point(size = 3) +
-geom_errorbar(width = 0.5)
+geom_errorbar(width = 0.5) -> error_plus_point
+
+ggsave(error_plus_point, file = "error_plus_point.pdf", width = 6, height = 4)
+
+#check your plot using your browser GUI
 ```
 
 ![geom_point only](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/point_plusError_only.png)
 
 wow! look at that! our point estimates are not very different after all!
+
+## Part 6. Recap
+In today's lecture and practicum you have learned 4 core skills for bioinformatics work:
+
+1. How to log in an interact with a supercomputer (aka **HPC**; High Performance Computer)
+2. You have learned how to navigate a **Unix** system (Rivanna) and some basic file manipulations
+3. You have learned how to use **R-tidyverse** to filter, manipulate, and summarize data.
+4. You have learned how to visualize data using **R-ggplot**
+
+## Part 7. Code Challenge (20 pts)
+
+Using you knowledge of R for data manipulation generate the following graph --> A graph showing on the **x-axis** all the species contained in `iris`, on the **y-axis** showing the mean value for `Petal.Length` also include error bars showing the standard deviation. Hint: you will use `group_by()`, `summarize()`, `ggplot(aes())`, `geom_point()`, `geom_errorbar()`, among others. Submit your graph to the homework folder once you are done.
+
+
