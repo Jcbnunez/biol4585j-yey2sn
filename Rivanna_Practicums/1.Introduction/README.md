@@ -556,7 +556,7 @@ The R library _ggplot_ is perhaps on of the most famous libraries among data sci
 #### Ggplot works like a canvas
 As a graphical tool, ggplot has rules of its own that we need to understand. Any ggplot figure is built using three sets of components: 1. Data + 2. Aesthetic map + 3. Elements. Here is an example: 
 
-![ggplot basics](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/ggplot_basics.wb.png)
+![ggplot basics](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/ggplot_basics.wb2.png)
 **Data**: This is the data object would would like to base your figure on. Pass your data into ggplot by pipping it into `ggplot`
 
 **Aesthetic map**: This is. the first function of any ggplot. This part generally always looks the same `ggplot(aes(..))`. it is a nested function of `ggplot()` and the `aes()` function. While technically different functions, for the purposes of this class, you can think for  `ggplot(aes(..))` as a single function. Now inside that function we get to put in what we want the actual data to be. For example `x=` , `y=` will define what data will go into the x and y axis.
