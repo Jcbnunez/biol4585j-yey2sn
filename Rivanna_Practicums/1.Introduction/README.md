@@ -195,7 +195,7 @@ grep ">" Mus.sequence.fasta > justheaders.txt
 ```
 In this case you are using the unix command `>` to save the output of this command to a file named `justheaders.txt`.
 
-**THIS IS CONFUSING!!**: uh oh! we have encounter the first point were most first-time bioinformaticians get confused. How come that we are using `">"` as the key word of grep, but also, at the same time, we are using `>` (notice that there are no quotes!) to save new files! The reason for this comes from the fact that these two symbols are changing meaning as a function of their position in the code. the `">"` is acting as the argument of the grep command and it is related to the properties of the fasta file. On the other hand, the `>` (no quotes) is an internal command of the operating system that means **save to**.  I know this is can be confusing at first, but don't get discouraged by this. Also, don't worry we wont use too many if these confusing cases in the class... but you should know that these exists... and are actually very common...  The reality is that coding can sometimes be confusing like this and it is just a matter of being careful and paying attention when we code. :) You can do this!!
+**CONFUSING!!**: uh oh! we have encounter the first point were most first-time bioinformaticians get confused. How come that we are using `">"` as the key word of grep, but also, at the same time, we are using `>` (notice that there are no quotes!) to save new files! The reason for this comes from the fact that these two symbols are changing meaning as a function of their position in the code. the `">"` is acting as the argument of the grep command and it is related to the properties of the fasta file. On the other hand, the `>` (no quotes) is an internal command of the operating system that means **save to**.  I know this is can be confusing at first, but don't get discouraged by this. Also, don't worry we wont use too many if these confusing cases in the class... but you should know that these exists... and are actually very common...  The reality is that coding can sometimes be confusing like this and it is just a matter of being careful and paying attention when we code. :) You can do this!!
 
 ## Coding challenge (part of the quiz):
 As we just explored above, the grep command is a powerful way to mine for data. In our case,  the command `grep ">" Mus.sequence.fasta > justheaders.txt` you could verbally reads this command out loud as: *hey Rivanna, please find (`grep`) all lines with the symbol `">"` in the file `Mus.sequence.fasta` and save it to (`>`) the new file `justheaders.txt`*. The power of commands like grep is that you can use options (sometimes called "flags") to change entire behaviors of the function. For instance, just by adding the flag `-v` the command becomes "find everything that DOES NOT contain a given symbol".  As such:
@@ -270,11 +270,11 @@ R
 ```
 ### Am I inside R or... am I still in Rivanna
 You can differentiate these by the prompt you get in your console.
-Generally speaking you know you are in Rivanna if the console reads:
+Generally speaking you know you are in **Rivanna** if the console reads:
 ```
 -bash-4.2$
 ```
-Generally speaking you know you are in R if the console reads just:
+Generally speaking you know you are in **R** if the console reads just:
 ```
 >
 ```
@@ -298,19 +298,92 @@ The tidyverse is the colloquial name given to a broad suite of R libraries and p
 
 ## The Iris flower datasets
 
-For our first biological analysis (and chance to learn R) we are going to use the  famous (Fisher and Anderson) iris data set. This dataset gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are _Iris setosa_,_versicolor_, and _virginica_.
+For our first biological analysis (and chance to learn R) we are going to use the iris data set. This dataset gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are _Iris setosa_,_versicolor_, and _virginica_.
 
 ![Three species of Iris flowers](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/iris-machinelearning.png)
 [Figure from data camp](https://www.datacamp.com/community/tutorials/machine-learning-in-r)
 
-### Source of the Iris datatset
+### Learn more about this of the Iris datatset
 You can type
 ```
 ?iris
-```
-for more details
 
-* Fisher, R. A. (1936) The use of multiple measurements in taxonomic problems.  _Annals of Eugenics_,  **7**, Part II, 179–188.
+# In R, you can learn more details about a package or function by using the ? commmand
+```
+**what is going on here??** By typing `iris` we are summoning an object with data that is preloaded into R. Basically `iris`  = our data! In future classes we will learn how to make our own objects!
+
+For more details on the data see:
 
 * The data were collected by Anderson, Edgar (1935). The irises of the Gaspe Peninsula,  _Bulletin of the American Iris Society_,  **59**, 2–5.
 
+## Exploring data in R & using pipes (%>%) to execute functions
+Similar to Rivanna (Unix) we can use exploratory commands to get a sense of what the data looks like. 
+
+**NOTE**: `library(tidiverse , lib.loc = "/project/biol4585j-yey2sn/R/4.0/"` must be activated for any of this code to work. 
+
+### See the first N colums of iris
+```
+iris %>% head(n=10)
+```
+**what is going on here??** R-tidyverse has a funky way of doing code, but I promise, it is actually very intuitive. In this language you can code by "piping" `%>%` data into commands to get desired outputs. In our case here, the code, `iris %>% head(n=10)`, can be read out loud as" *to the data, `iris`, apply `%>%` the head `head(n = 10)` command*.
+
+**how many pipes can I use?** As many as you like. For example you could get the "tail of the head". E.g., `iris %>% head(n = 20) %>% tail(n = 10)`. This is an example command chain (taking the first 20 lines of iris and the taking the last 10 lines ... of the first 20 lines). But I hope it shows the power of pipes in R. 
+
+**What is the directional of pipes?** While very flexible, pipes do have directionality. That is to say, the data always comes first, then the functions... (not the other way around). `iris %>% head(n=10)` **is correct**. On the other hand `head(n=10) %>% iris` **is incorrect!**
+
+**What is up with head(n = 10)?** Wait a minute! didn't we just learn that the `head` command used "flag arguments" `head -n 10`? Why are we seeing `head(n = 10)`? The answer is simple: `head -n 10` is the **UNIX (Rivanna)** language, whereas `head(n = 10)` is the **R ** language. While in unix functions take arguments using flags separated by spaces "-x -n -k", in R functions take arguments inside parenthesis and are often separated by commas. Example `head(n = 10)`. In this class you will have to wire your brain to being bilingual, but, instead of English, Spanish, or French, our languages are going to be unix and R. 
+
+### Moving around Rivanna while inside of R
+To move around the supercomputer you can use commands:
+```
+getwd()  #---> this is the same as pwd in unix
+setwd("./<< address >>") #--> this is the same as cd ./<< address >> in unix
+```
+**A core difference between Rivanna (unix) and R** is that, while in Rivanna you can provide addresses as simnple text `./some/place/here`,  **in R** you have to give addresses in quotes `"./some/place/here"`.
+
+## Filtering data in R 
+Ok, now we are going to start to data mine our iris dataset. Lets explore some filtering options
+
+### How many colums and rows do we have?
+```
+iris %>% dim
+
+# dim outputs 2 values: the number of rows and the number of columns
+```
+### What are the names of the columns?
+```
+iris %>% names
+
+# names will provide you with the names of all the columns in the dataset
+```
+### How to select columns of interest? (Pipes in action)
+Lets say that you are interested in just seeing the "Sepal.Length" column. You can do this by:
+```
+iris %>% select(Sepal.Length)
+```
+This outputs a the entirety of the column. Lets say that you want to select "Sepal.Length" but only see the first 10 lines.
+```
+iris %>% select(Sepal.Length) %>% head(n = 10)
+
+# Now we are seeing pipes in action!
+```  
+### How to select columns of interest *and* save it to a new data object?
+for our next task we will do a double take! we will select TWO columns and then we will save these to a brand new object.
+```
+iris %>% select(Sepal.Length, Species) -> newIris
+```
+**what is going on here??** Here, we are taking the data set `iris`, from it we are selecting two columns `select(Sepal.Length, Species)` and then we are saving the output of the pipe ` -> ` to the object `newIris`.  (**WARNING:** never save a *modified* object into the *original* object. example: `iris %>% head -> iris` **This is a terrible idea!!** ) Can you guess why? Again, this is something that you *can* do... but you definitely *should not* do.
+Lets look at our new object:
+```
+newIris %>% head
+```
+### PROTIP: Making your code look pretty and tidy.
+You make your code look pretty by using the "enter" key (formally called the carriage return) in between your pipes and your pipe terminations. Returns always go after the pipe or pipe termination symbol.
+Example:
+```
+iris %>%    #Notice how you can press enter after the pipe
+select(Sepal.Length, Species) ->    #Notice how you can press enter after the pipe terminator
+newIris
+
+#isn't coding just wonderful![?] .... I think so anyway :)
+```
