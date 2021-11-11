@@ -177,6 +177,11 @@ grep ">" Mus.sequence.fasta
 
 # Remember we are using ">" as our key word because we know
 # that fasta files use > to indicate DNA/RNA names
+
+# Also, notice that I wrote this text using a "#" symbol.
+# In the super computer the "#" symbol means "this line is just text"
+# The supercomputer will treat this as simple text, not code
+# This is used to annotate code
 ``` 
 What do you see?
 *Quiz question: How many DNA/RNA sequences are on file?* **X points**
