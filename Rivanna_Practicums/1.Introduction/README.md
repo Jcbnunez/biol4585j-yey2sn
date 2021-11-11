@@ -138,7 +138,7 @@ We can learn about file sizes by using a special option of the command "ls". Thi
 ```{bash}
 ls -l --block-size=M
 ```
-*Quiz question: How big is the file?* **X points**
+*How big is the file?* 
 
 * File Length
 
@@ -148,7 +148,7 @@ wc -l Mus.sequence.fasta
 ```
 NOTICE: `wc -l` is a **specific file command** (i.e., not a global one). specific command expect that you will indicate a *specific file* in which to act. in this case we are asking Rivanna to count the number of lines of the file `Mus.sequence.fasta`
 
-*Quiz question: How many lines are there in the file?* **X points**
+*How many lines are there in the file?* 
 
 * Exploring the head and tail of a file.
 
@@ -159,7 +159,7 @@ head -n 10 Mus.sequence.fasta
 ```
 What is the console showing you?
 
-*Quiz question: The command `tail` is the reciprocal of `head`, i.e., shows the last "n" lines of a file. Can you infer how would the command to show the last 15 lines of our file? (it is not a trick question, it is probably as simple as you think it is...)* **X points**
+*The command `tail` is the reciprocal of `head`, i.e., shows the last "n" lines of a file. Can you infer how would the command to show the last 15 lines of our file? (it is not a trick question, it is probably as simple as you think it is...)* 
 
 ### Finding patterns in a file and creating a new file:
 One staple of bioinformatic files is that they are arcane and jammed packed with all sorts of data of biological interest. One core challenge of any bioinformatician is how to extract data from files of any size.. from 10Mb to 1Tb!. One easy way to do this is by using the command `grep`.
@@ -184,8 +184,8 @@ grep ">" Mus.sequence.fasta
 # This is used to annotate code
 ``` 
 What do you see?
-*Quiz question: How many DNA/RNA sequences are on file?* **X points**
-*Quiz question: What is the model organism from which these sequences come from?* **X points**
+*How many DNA/RNA sequences are on file?* 
+*What is the model organism from which these sequences come from?* 
 
 #### Creating a new file
 lets say that you want to create a brand new file that only contains the header names. you can do this by modifying our earlier command.
@@ -197,7 +197,7 @@ In this case you are using the unix command `>` to save the output of this comma
 
 **CONFUSING!!**: uh oh! we have encounter the first point were most first-time bioinformaticians get confused. How come that we are using `">"` as the key word of grep, but also, at the same time, we are using `>` (notice that there are no quotes!) to save new files! The reason for this comes from the fact that these two symbols are changing meaning as a function of their position in the code. the `">"` is acting as the argument of the grep command and it is related to the properties of the fasta file. On the other hand, the `>` (no quotes) is an internal command of the operating system that means **save to**.  I know this is can be confusing at first, but don't get discouraged by this. Also, don't worry we wont use too many if these confusing cases in the class... but you should know that these exists... and are actually very common...  The reality is that coding can sometimes be confusing like this and it is just a matter of being careful and paying attention when we code. :) You can do this!!
 
-## Coding challenge (part of the quiz):
+## Coding challenge (part I of the quiz):
 As we just explored above, the grep command is a powerful way to mine for data. In our case,  the command `grep ">" Mus.sequence.fasta > justheaders.txt` you could verbally reads this command out loud as: *hey Rivanna, please find (`grep`) all lines with the symbol `">"` in the file `Mus.sequence.fasta` and save it to (`>`) the new file `justheaders.txt`*. The power of commands like grep is that you can use options (sometimes called "flags") to change entire behaviors of the function. For instance, just by adding the flag `-v` the command becomes "find everything that DOES NOT contain a given symbol".  As such:
 
 ```
@@ -209,7 +209,7 @@ grep ">" Mus.sequence.fasta
 #find all lines NOT containing the ">" symbol
 grep -v ">" Mus.sequence.fasta 
 ```
-#### What is the challenge? -->  (X points)
+#### What is the challenge? -->  (5 points)
 Your challenge is to create a file named  "noheaders.<< your name >>.txt". This is a file that contains only the DNA/RNA sequence of `Mus.sequence.fasta`. After creating this file I want you to **copy** this file to your **Homework_Drop_off** (this is a folder located at `/project/biol4585j-yey2sn/Homework_Drop_off/<< your name >>`). That's it.
 
 To recap, to complete this you have to:
@@ -400,9 +400,9 @@ filter(Sepal.Width > 3.1)
 # A lot..
 # why computer programmers are obsessed with the > symbol is a mistery!
 ```
-*Quiz question: how many observation have Sepal.Width > 3.1* **X points** (hint you can pipe the code to dim `%>% dim`)
-*Quiz question: how many observation have Sepal.Width > 3.4* **X points** 
-*Quiz question: how many observation have Sepal.Width < 2.7* **X points** 
+*how many observation have Sepal.Width > 3.1*  (hint you can pipe the code to dim `%>% dim`)
+*how many observation have Sepal.Width > 3.4*  
+*how many observation have Sepal.Width < 2.7*  
 
 **Math and logical operators in R** *your most powerful tools for data mining!* 
 
@@ -438,9 +438,9 @@ filter(Sepal.Width > 3.1 & Petal.Width < 1.5 & Species != "setosa")
 # In English we would say:
 #filter Sepal.Width > 3.1 AND Petal.Width < 1.5 AND Species IS NOT "setosa"
 ```
-*Quiz question: how many observation have Sepal.Width > 3.3 and Petal.Width < 0.5* **X points** 
+*how many observation have Sepal.Width > 3.3 and Petal.Width < 0.5*  
 
-## Adding new columns to my data object 
+## Adding new columns to a data object 
 Ok, you can filter exisitng data! But can you create new data in your data object? Yes you can, and here is how:
 ```
 iris %>%    
@@ -454,11 +454,78 @@ mutate(NewCol = "this_is_new")
 Ok, but that is kinda lame because we just "spammed" the phrase `this_is_new` in our data object. This is not very useful.. right?
 
 Well, lets say that I want to add a new column called `isFavorite`. Basically if the species is my favorite, I will say `Yes`, otherwise `No`. We can do this by **nesting** the `mutate` and `case_when` commands! Like so:
-
 ```
 iris %>%    
 mutate(isFavorite = case_when(Species == "versicolor" ~ "Yes", Species != "versicolor" ~ "No",) )
+
+# In this case. I am asking R to write Y for my favorite species, versicolor.  
 ```
 **what is going on here??** Ok, a lot of things are happening here! Lets walk through them. First thing you are doing is piping the data `iris` to a `mutate` command to create a new column. However, **inside** the `mutate()` function you are **nesting** the `case_when()` function.
 
-**case_when()**
+**case_when()** is a very powerful function that aks R to evaluate whether or not a condition is true and then react accordingly (`Species == "versicolor"`). In this case the reaction (`~`) is to print the word "Yes" or "No". When combined with the function `mutate` it creates a column of "Yes" or "No" as the new column.
+
+## Summarizing data
+Now that we are masters of data exploration and manipulation. We can start asking questions about the data. We will start by asking trivial questions about  the data, but we will eventually move into more interesting biological questions. 
+The first thing we need in order to summarize data is **grouping variable**. A grouping variable is basically some aspect of the data that we can use to partition the data. For example, lets partition the data based on whether or not a given species is my favorite or not. We will accomplish this by using the command `group_by()` 
+```
+iris %>%    
+mutate(isFavorite = case_when(Species == "versicolor" ~ "Yes", Species != "versicolor" ~ "No",)) %>%
+group_by(isFavorite) 
+```
+**what is going on here??** So far, not much has happened in the front-end. In the back-end, however, as long as you continue to pipe the `group_by` function, R will group the data according to the contents of the  `isFavorite ` column. Lets see what we can do with this:
+
+### Count the number of species which are, and are not, my favorites:
+We can count the number of observations which have Yes or No in the `isFavorite` by nesting two functions `summarize()` and `n()`.  **summarize** is a powerful function that will apply any function to your data. However, by this is not done globally, instead this is done within the groups of the grouping variable (for example, all the Yes, and all the No). On the other hand `n()`, the function inside, will count the number of observation in each group.  
+```
+iris %>%    
+mutate(isFavorite = case_when(Species == "versicolor" ~ "Yes", Species != "versicolor" ~ "No",)) %>%
+group_by(isFavorite) %>%
+summarize( n() )
+```
+### Estimate the mean and standard deviation of the Sepal.Length, as a function of my favorites
+Lets expand on our code above to do more stuff! For example, lets estimate both the mean and standard deviation of `Sepal.Length` for both my favorite and non-favorite samples. As I mentioned, instead of changing the code, we are going to build on it by adding more arguments to the `summarize()` function. We can do this by using commas `,`.
+**Stats Functions:** in R you can estimate means using `mean()` and standard deviations using `sd()`.
+```
+iris %>%    
+mutate(isFavorite = case_when(Species == "versicolor" ~ "Yes", Species != "versicolor" ~ "No",)) %>%
+group_by(isFavorite) %>%
+summarize(n(), mean(Sepal.Length), sd(Sepal.Length) )
+
+#You should see a table with all this data!
+#  isFavorite `n()` `mean(Sepal.Length)` `sd(Sepal.Length)`
+# <chr>      <int>                <dbl>              <dbl>
+# No           100                 5.80              0.945
+# Yes           50                 5.94              0.516
+```
+### Can we make this code prettier and neater? 
+As we continue to code our analysis, you will soon notice how our code starts growing and growing. And it may turn into a chunk of text that is difficult to keep track of. Earlier on we learned a trick  where you can use "enter" after pipes to stream-line the code. In addition to pipes (`%>%` and `->`), you can use this trick also for commas `,`.  Applying this trick to our code makes now look more organized:
+
+### Tip 1: use your spaces strategically
+```
+iris %>%    
+mutate(isFavorite = case_when(	Species == "versicolor" ~ "Yes", 
+		 					   	Species != "versicolor" ~ "No",)  ) %>%
+group_by(isFavorite) %>%
+summarize(  n(), 
+			mean(Sepal.Length), 
+			sd(Sepal.Length) )
+```
+Notice that **this code is exactly the same as the one above** it simply uses spacing as a way to make the code more legible and easy to follow. 
+
+### Tip 2: provide output names to the summarize() function
+Another way to make both the code and the output easier to add your own names to the summarize function. Right now, we are simply using the default behavior in that outputs the names of the functions as the column names. This looks like   `'n()'` `'mean(Sepal.Length)'` `'sd(Sepal.Length)'` . This can get clunky really quickly, so we can provide R our own output names. See the code below
+```
+iris %>%    
+mutate(isFavorite = case_when(	Species == "versicolor" ~ "Yes", 
+		 					   	Species != "versicolor" ~ "No",)  ) %>%
+group_by(isFavorite) %>%
+summarize(  N = n(),                 # Notice we have added the name N =
+			MEAN = mean(Sepal.Length),     # Notice we have added the name MEAN =
+			SD = sd(Sepal.Length) )        # Notice we have added the name SD =
+
+# This outputs a much neater output:
+#  isFavorite   N  MEAN    SD
+# <chr>      <int> <dbl> <dbl>
+# No           100  5.80 0.945
+# Yes           50  5.94 0.516
+```
