@@ -553,4 +553,29 @@ The R library _ggplot_ is perhaps on of the most famous libraries among data sci
 #### Ggplot works like a canvas
 As a graphical tool, ggplot has rules of its own that we need to understand. Any ggplot figure is built using three sets of components: 1. Data + 2. Aesthetic map + 3. Elements. Here is an example: 
 
-![ggplot basics](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/ggplot_basics.wb.png)
+![ggplot basics](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/ggplot_basics.png)
+**Data**: This is the data object would would like to base your figure on. Pass your data into ggplot by pipping it into `ggplot`
+
+**Aesthetic map**: This is. the first function of any ggplot. This part generally always looks the same `ggplot(aes(..))`. it is a nested function of `ggplot()` and the `aes()` function. While technically different functions, for the purposes of this class, you can think for  `ggplot(aes(..))` as a single function. Now inside that function we get to put in what we want the actual data to be. For example `x=` , `y=` will define what data will go into the x and y axis.
+
+**Elements**: This is the bread and butter of ggplot. You can add different types of figures to your plot. **Given that they are compatible with your data, of course!** Some examples are: `geom_point()`, `geom_errorbar()`. We will learn different elements as we progress in the class. A key thing to know is that you add elements to your plot using the `+` symbol (you can press enter after every `+`). 
+
+Lets see an example:
+```
+MyFavoriteIrisFlowers %>%
+ggplot(aes(x=isFavorite, y=MEAN)) +
+geom_point(size = 3)
+
+#this will generate a "plot" point showing our data. geom_point only requires x and y data.
+```
+![geom_point only](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/point_only.png)
+This plot shows the point estimates of our `summarize(MEAN = ...)` analysis. But always remember that in statisitcs, point estimates are always associated with variance (i.e., a measure of data dispersion ). In our case we can some measure of dispersion by including our estimates of standard deviation  `summarize(SD = ...)`. We can do this using the element known as `geom_errorbar()`. This element requires, on top of `x` and `y`, two additional arguments `ymin` and `ymax`. We need to add these to the **aesthetic map**.
+
+```
+MyFavoriteIrisFlowers %>%
+ggplot(aes(x=isFavorite, y=MEAN, ymin = MEAN-SD, ymax = MEAN+SD)) +
+geom_point(size = 3) +
+geom_errorbar(width = 0.5)
+```
+![geom_point only](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/point_plusError_only.png)
+wow! look at that! our point estimates are not very different after all!
