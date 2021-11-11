@@ -404,7 +404,7 @@ filter(Sepal.Width > 3.1)
 *Quiz question: how many observation have Sepal.Width > 3.4* **X points** 
 *Quiz question: how many observation have Sepal.Width < 2.7* **X points** 
 
-**Conditional logical operators in R** *your most powerful tools for data mining!* 
+**Math and logical operators in R** *your most powerful tools for data mining!* 
 
 | Arithmetic Operator    Description                 	|
 |-----------------------------------------	|
@@ -441,3 +441,24 @@ filter(Sepal.Width > 3.1 & Petal.Width < 1.5 & Species != "setosa")
 *Quiz question: how many observation have Sepal.Width > 3.3 and Petal.Width < 0.5* **X points** 
 
 ## Adding new columns to my data object 
+Ok, you can filter exisitng data! But can you create new data in your data object? Yes you can, and here is how:
+```
+iris %>%    
+mutate(NewCol = "this_is_new")
+
+
+# You have used the function mutate add a new column!
+# Generally this works by:
+# mutate(NewColName = << data for new column >>)
+```
+Ok, but that is kinda lame because we just "spammed" the phrase `this_is_new` in our data object. This is not very useful.. right?
+
+Well, lets say that I want to add a new column called `isFavorite`. Basically if the species is my favorite, I will say `Yes`, otherwise `No`. We can do this by **nesting** the `mutate` and `case_when` commands! Like so:
+
+```
+iris %>%    
+mutate(isFavorite = case_when(Species == "versicolor" ~ "Yes", Species != "versicolor" ~ "No",) )
+```
+**what is going on here??** Ok, a lot of things are happening here! Lets walk through them. First thing you are doing is piping the data `iris` to a `mutate` command to create a new column. However, **inside** the `mutate()` function you are **nesting** the `case_when()` function.
+
+**case_when()**
