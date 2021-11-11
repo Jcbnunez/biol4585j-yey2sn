@@ -249,3 +249,68 @@ Then press enter... and voila! you now are at your folder of interest. I hope th
 
 ### you probably want to create bookmarks
 This will help you get to and from folder faster. There is an option to create bookmarks in the top menu of the file browser.
+
+
+## Part 5. Introduction to R (a statistical analysis framework).
+This is the last thing we will do today. Before we dive into some code lets cover some basics. Up to this point we have been coding in Rivanna itself. In other words we have been talking directly to the supercomputer. A big part of bioinformatics and genomics is to do statistical analysis of DNA sequences. The programming language "R" is famous for having a lot of statistical tools at our disposal. Because of this we will choose to do our statistics in R as opposed to on Rivanna directly. To accomplish this we have to run R on top of Rivanna. I know this can be confusing, we are running Rivanna on top of our computers and then R on top of Rivanna. 
+
+### How to run a program within Rivanna
+In order to do this we have to first load the program itself and all its dependencies. In Rivanna we call this to "load of module", or `module load`:
+
+```
+module load intel/18.0 intelmpi/18.0
+module load goolf/7.1.0_3.1.4
+module load gdal proj R/4.0.0
+# ^ These are all the modules needed to run R in Rivanna
+```   
+Now that we have loaded the modules lets activate `R`. This is done by simply typing:
+
+```
+R
+```
+### Am I inside R or... am I still in Rivanna
+You can differentiate these by the prompt you get in your console.
+Generally speaking you know you are in Rivanna if the console reads:
+```
+-bash-4.2$
+```
+Generally speaking you know you are in R if the console reads just:
+```
+>
+```
+**IT IS CONFUSING, AGAIN:** *I know, I know,* yet again.... we find the `>` symbol meaning something completely different. In this case `>` has a different meaning because we are no longer in Rivanna, per se, but rather inside R.
+
+### What is different in R vs Rivanna (unix)?
+The short answer is pretty much everything. To be clear the commands we just practiced `echo, cd, pwd, grep` work in Rivanna, but they wont work inside R. In actuality, you will find yourself jumping between coding in R and coding in Rivanna (generally speaking Rivanna is a Unix system)... so you will jump between R and Unix. 
+
+### Why R ?
+The power of R lies in in libraries. Basically there is a large community of scientists who actively develop libraries in R to do a variety of fancy statistical analysis. As of ~2020 there are an estimated 10,000 libraries in circulation (see [https://cran.r-project.org/](https://cran.r-project.org/) and [https://www.bioconductor.org/](https://www.bioconductor.org/)). As you may imagine you dont need all the packages all the time, so R allows you to only load the packages that you need, or want. Lets load some packages:
+```
+library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
+
+## Notice that the option lib.loc is only required because
+## we are using an educational partition. 
+## In most super-computers or personal-computers simply
+## typing library(tidyverse) will do the trick.
+```
+### The Tidyverse
+The tidyverse is the colloquial name given to a broad suite of R libraries and packages designed to drastically improve the user experience in R and ensure that our analysis pipelines can be easily replicated. We don't have time to do a deep dive into this library but you can learn more about it [here](https://www.tidyverse.org/). 
+
+## The Iris flower datasets
+
+For our first biological analysis (and chance to learn R) we are going to use the  famous (Fisher and Anderson) iris data set. This dataset gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are _Iris setosa_,_versicolor_, and _virginica_.
+
+![Three species of Iris flowers](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/iris-machinelearning.png)
+[Figure from data camp](https://www.datacamp.com/community/tutorials/machine-learning-in-r)
+
+### Source of the Iris datatset
+You can type
+```
+?iris
+```
+for more details
+
+* Fisher, R. A. (1936) The use of multiple measurements in taxonomic problems.  _Annals of Eugenics_,  **7**, Part II, 179–188.
+
+* The data were collected by Anderson, Edgar (1935). The irises of the Gaspe Peninsula,  _Bulletin of the American Iris Society_,  **59**, 2–5.
+
