@@ -442,6 +442,9 @@ group_by(isFavorite) %>%
 summarize( n() )
 ```
 ### Estimate the mean and standard deviation of the Sepal.Length, as a function of my favorites
+
+**Need a reminder about what _means_ and _standard deviations_ are? [check this video tutorial (by Josh Starmer)](https://youtu.be/SzZ6GpcfoQY)
+
 Lets expand on our code above to do more stuff! For example, lets estimate both the mean and standard deviation of `Sepal.Length` for both my favorite and non-favorite samples. As I mentioned, instead of changing the code, we are going to build on it by adding more arguments to the `summarize()` function. We can do this by using commas `,`.
 **Stats Functions:** in R you can estimate means using `mean()` and standard deviations using `sd()`.
 ```
