@@ -1,5 +1,7 @@
 ## Part 1. How to log into Rivanna. 
 
+**NOTE:** To access Rivanna you must use on-grounds wifi (e.g., eduroam) or ethernet. If you want to access Rivanna off-grounds you will need to use [UVA's VPN](https://virginia.service-now.com/its/?id=itsweb_kb_article&sys_id=f24e5cdfdb3acb804f32fb671d9619d0)
+
 ### Check out [Log into Rivanna (Video tutorial)](https://youtu.be/_kpRgRpGMXo)
 
 1. Type [https://_rivanna_-_portal_._hpc_.virginia.edu](https://rivanna-portal.hpc.virginia.edu) into your web browser. This will automatically trigger a UVA authentication step. Input your UVA credentials to enter the super-computer GUI.
