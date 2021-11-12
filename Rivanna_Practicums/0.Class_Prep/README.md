@@ -34,7 +34,9 @@ To complete this course you will make heavy use of three applications in Rivanna
 
 ## Part 3. Using the GUI (graphical user interface) to facilitate my coding.
 
- You may have noticed after logging in that Rivanna provides you a nice GUI for you to interact. In our case, we blew pass that, straight to the command line. But you can actually use your GUI to navigate your coding experience. 
+### Check out [Navigating the file browser (Video tutorial)](https://youtu.be/WbXlrIu1dXI)
+
+You may have noticed after logging in that Rivanna provides you a nice GUI for you to interact. In our case, we blew pass that, straight to the command line. But you can actually use your GUI to navigate your coding experience. 
 
 I did not introduced this right away because there is actually some nuance to using the GUI file navigator.  You can click in the computer or the folder icon and it will open a file navigator showing the contents of you home folder. 
 
