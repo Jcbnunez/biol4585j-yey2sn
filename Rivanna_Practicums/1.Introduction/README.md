@@ -1,32 +1,7 @@
 # A Primer on Bioinformatics and Rivanna
 
-**NOTE:** This step-by-step by guide contains assignments interspersed across the text. Read carefully and ask questions during class to make sure you get all the allocated points.  In total you can expect 25 points per class from these coding assignments of quizzes. 
+## Part 1.  Interacting with the super computer
 
-## Part 1. How to log into Rivanna. 
-
-### Check out [Log into Rivanna - video Tutorial](https://youtu.be/_kpRgRpGMXo)
-
-1. Type [https://_rivanna_-_portal_._hpc_.virginia.edu](https://rivanna-portal.hpc.virginia.edu) into your web browser. This will automatically trigger a UVA authentication step. Input your UVA credentials to enter the super-computer GUI.
-2. Once inside you will see a "Message of the day board". Go to the top bar and search for the option "**Interactive Apps**".
-3. Once you click **Interactive Apps** a drop down menu will appear. Click on the option names **Desktop**. 
-4. Clicking on Desktop will give you the option to create an interactive session with the supercomputer. Before you can do that you need to tell the supercomputer what are the parameters of your interactive session. These are:
-	```
-	Rivanna partition: --> select "instructional"
-	Number of hours: --> 3
-	Number of cores:--> 3 
-	Memory Request in GB:--> 24
-	Allocation (SUs): --> leave empty
-	Optional: GPU type for GPU partition**: --> leave empty
-	Optional: Slurm Option: --> leave empty
-	Optional: Group: --> write biol4585j-yey2sn
-	```
-5. Once you have these entered these options go ahead and press **LAUNCH**
-6. It may take a couple seconds to a minute before your request is approved by the powers that be. Once this is done a button will appear saying **Launch Desktop**
-7. WELCOME TO RIVANNA -- Congratulations, you are now interacting with the super computer!.
-
-## Part 2.  Interacting with the super computer
-
-### Now that we are connected to Rivanna, lets learn some basics:
 In order to "talk to the super computer" you must click on ther MATE terminal icon on the top bar of the screen. Once you click on it a "black box" with the word "**bash**" will open up. YOU ARE READY TO GET CODING!
 
 ### Talking to the computer... well... making the computer talk to you
@@ -108,7 +83,7 @@ mkdir my_first_folder
 ```
 In this case the command is **mkdir** and you are creating a folder named **my_first_folder**. Also, notice that spaces " " will not be used used as part of our code. Instead we will replace all spaces with "_" symbols. So instead of "my_first_folder" we must write "my_first_folder". This is **KEY** becuase spaces " " can mess up code real bad! and we dont want that.. do we?
  
-## Part 3. Exploring and copying files around
+## Part 2. Exploring and copying files around
 
 ### Move into your new folder
 We first want to move into our new folder  "my_first_folder":
@@ -235,28 +210,7 @@ man << function >>
 ```
 Give it a try...
 
-## Part 4. Using the GUI (graphical user interface) to facilitate my coding.
-
- You may have noticed after logging in that Rivanna provides you a nice GUI for you to interact. In our case, we blew pass that, straight to the command line. But you can actually use your GUI to navigate your coding experience. 
-
-I did not introduced this right away because there is actually some nuance to using the GUI file navigator.  You can click in the computer or the folder icon and it will open a file navigator showing the contents of you home folder. 
-
-### How do I navigate to my other folders (e.g., /scratch)? 
-To do this look at the menu bar of the top of file browser and click on the button that says **GO**. From the drop down menu choose the option **Location... (Crtl + L)**. This will enable a type in bar: in that bar now type:
-```
-/scratch/<< your user name >>
-```
-For example
-```
-/scratch/abc123
-```
-Then press enter... and voila! you now are at your folder of interest. I hope that of the lessons you are learning here is that all those fancy GUIs in your computer are simply running regular commands like "cd" on the backend. Feel free to try this to move around your folders...
-
-### you probably want to create bookmarks
-This will help you get to and from folder faster. There is an option to create bookmarks in the top menu of the file browser.
-
-
-## Part 5. Introduction to R (a statistical analysis framework).
+## Part 3. Introduction to R (a statistical analysis framework).
 This is the last thing we will do today. Before we dive into some code lets cover some basics. Up to this point we have been coding in Rivanna itself. In other words we have been talking directly to the supercomputer. A big part of bioinformatics and genomics is to do statistical analysis of DNA sequences. The programming language "R" is famous for having a lot of statistical tools at our disposal. Because of this we will choose to do our statistics in R as opposed to on Rivanna directly. To accomplish this we have to run R on top of Rivanna. I know this can be confusing, we are running Rivanna on top of our computers and then R on top of Rivanna. 
 
 ### How to run a program within Rivanna
@@ -598,7 +552,7 @@ ggsave(error_plus_point, file = "error_plus_point.pdf", width = 6, height = 4)
 
 wow! look at that! our point estimates are not very different after all!
 
-## Part 6. Recap
+## Part 4. Recap
 In today's lecture and practicum you have learned 4 core skills for bioinformatics work:
 
 1. How to log in an interact with a supercomputer (aka **HPC**; High Performance Computer)
@@ -606,7 +560,7 @@ In today's lecture and practicum you have learned 4 core skills for bioinformati
 3. You have learned how to use **R-tidyverse** to filter, manipulate, and summarize data.
 4. You have learned how to visualize data using **R-ggplot**
 
-## Part 7. Code Challenge (20 pts)
+## Part 5. Code Challenge (20 pts)
 
 Using you knowledge of R for data manipulation generate the following graph --> A graph showing on the **x-axis** all the species contained in `iris`, on the **y-axis** showing the mean value for `Petal.Length` also include error bars showing the standard deviation. Hint: you will use `group_by()`, `summarize()`, `ggplot(aes())`, `geom_point()`, `geom_errorbar()`, among others. Submit your graph to the homework folder once you are done.
 
