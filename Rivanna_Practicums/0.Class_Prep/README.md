@@ -1,6 +1,6 @@
 ## Part 1. How to log into Rivanna. 
 
-### Check out [Log into Rivanna - video Tutorial](https://youtu.be/_kpRgRpGMXo)
+### Check out [Log into Rivanna (Video tutorial)](https://youtu.be/_kpRgRpGMXo)
 
 1. Type [https://_rivanna_-_portal_._hpc_.virginia.edu](https://rivanna-portal.hpc.virginia.edu) into your web browser. This will automatically trigger a UVA authentication step. Input your UVA credentials to enter the super-computer GUI.
 2. Once inside you will see a "Message of the day board". Go to the top bar and search for the option "**Interactive Apps**".
@@ -20,8 +20,19 @@
 6. It may take a couple seconds to a minute before your request is approved by the powers that be. Once this is done a button will appear saying **Launch Desktop**
 7. WELCOME TO RIVANNA -- Congratulations, you are now interacting with the super computer!.
 
+## Part 2. The terminal, text editor, and web browsing in Rivanna
 
-## Part 2. Using the GUI (graphical user interface) to facilitate my coding.
+### Check out [the three core apps used in this class (Video tutorial)](https://youtu.be/BDu_vD09KgY)
+To complete this course you will make heavy use of three applications in Rivanna: the Terminal, the Pluma Text Editor, The Firefox Web-browser.
+
+![Three apps for this class](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/0.Class_Prep/Figures/three_apps.png)
+**Terminal:** We will use this app to execute our code
+
+**Pluma Text Editor:** We will use this app to write our code
+
+**Firefox Web-browser:** We will use this app to look up code (**_stack overflow_** and our class website will be your friends!)
+
+## Part 3. Using the GUI (graphical user interface) to facilitate my coding.
 
  You may have noticed after logging in that Rivanna provides you a nice GUI for you to interact. In our case, we blew pass that, straight to the command line. But you can actually use your GUI to navigate your coding experience. 
 
@@ -40,3 +51,4 @@ Then press enter... and voila! you now are at your folder of interest. I hope th
 
 ### you probably want to create bookmarks
 This will help you get to and from folder faster. There is an option to create bookmarks in the top menu of the file browser.
+
