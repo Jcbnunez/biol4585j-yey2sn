@@ -1,6 +1,6 @@
 ## Part 1. How to log into Rivanna. 
 
-**NOTE:** To access Rivanna you must use **on-grounds** wifi (e.g., **_eduroam__**) or ethernet. If you want to access Rivanna off-grounds you will need to use [UVA's VPN](https://virginia.service-now.com/its/?id=itsweb_kb_article&sys_id=f24e5cdfdb3acb804f32fb671d9619d0)
+**NOTE:** To access Rivanna you must use **on-grounds** wifi (e.g., **_eduroam_**) or ethernet. If you want to access Rivanna off-grounds you will need to use [UVA's VPN](https://virginia.service-now.com/its/?id=itsweb_kb_article&sys_id=f24e5cdfdb3acb804f32fb671d9619d0)
 
 ### Check out [Log into Rivanna (Video tutorial)](https://youtu.be/_kpRgRpGMXo)
 
