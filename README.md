@@ -4,6 +4,8 @@ Material for the course UVA biol4585j (Evolutionary Genomics)
 
 ## How to log into Rivanna. 
 
+### Check out the [Video Tutorial](https://youtu.be/_kpRgRpGMXo)
+
 1. Type [https://_rivanna_-_portal_._hpc_.virginia.edu](https://rivanna-portal.hpc.virginia.edu) into your web browser. This will automatically trigger a UVA authentication step. Input your UVA credentials to enter the super-computer GUI.
 2. Once inside you will see a "Message of the day board". Go to the top bar and search for the option "**Interactive Apps**".
 3. Once you click **Interactive Apps** a drop down menu will appear. Click on the option names **Desktop**. 
