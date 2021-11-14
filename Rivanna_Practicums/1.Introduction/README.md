@@ -169,7 +169,7 @@ What do you see?
 *How many DNA/RNA sequences are on file?* 
 *What is the model organism from which these sequences come from?* 
 
-### Part 7. Creating a new file
+## Part 7. Creating a new file
 lets say that you want to create a brand new file that only contains the header names. you can do this by modifying our earlier command.
 
 ```
