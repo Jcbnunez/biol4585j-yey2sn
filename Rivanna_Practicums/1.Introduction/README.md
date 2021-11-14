@@ -265,7 +265,7 @@ For our first biological analysis (and chance to learn R) we are going to use th
 ![Three species of Iris flowers](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/1.Introduction/Figures/iris-machinelearning.png)
 [Figure from data camp](https://www.datacamp.com/community/tutorials/machine-learning-in-r)
 
-### Learn more about this of the Iris datatset
+#### Learn more about this of the Iris datatset
 You can type
 ```
 ?iris
@@ -278,7 +278,7 @@ For more details on the data see:
 
 * The data were collected by Anderson, Edgar (1935). The irises of the Gaspe Peninsula,  _Bulletin of the American Iris Society_,  **59**, 2–5.
 
-## Exploring data in R & using pipes (%>%) to execute functions
+### Exploring data in R & using pipes (%>%) to execute functions
 Similar to Rivanna (Unix) we can use exploratory commands to get a sense of what the data looks like. 
 
 **NOTE**: `library(tidiverse , lib.loc = "/project/biol4585j-yey2sn/R/4.0/"` must be activated for any of this code to work. 
