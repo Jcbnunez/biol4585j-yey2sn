@@ -15,7 +15,7 @@ echo "hello world"
 
 In this case the command **echo** will tell the computer to, literally, echo whatever is inside the quotes. Give it a try.  --- can you make it echo "hello << your name >>"?
 
-### Understanding your location in the supercomputer
+## Part 2. Understanding your location in the supercomputer
 While existing in the ether of information, the supercomputer is pretty much a real place, and as a user you can move to different folders or partitions (given you have the right permissions) to execute code. This is pretty much similar to the way your computer operates: there are root folders which contain sub-folder, etc, etc... you move inside the supercomputer by moving in and out of folders. 
 
 Remember, in Rivanna, you are always inside some folder and whatever command you type may or may not affect all the files inside the folder you are inhabiting. For example, **echo** doesn't do anything to files, but you can imagine there are command that can delete all your work in a milisecond! My point is, be mindful of what you code, and where you code it!
@@ -55,7 +55,8 @@ cd /scratch
 ```
 **Yes, you will need the "/" to travel around, just typing cd scratch wont work!**
 
-## Work spaces in Rivanna
+## Part 3. Know our core work spaces in Rivanna
+
 Up to this point we have been to three folder, or spaces, in Rivanna:
 1. /home
 2. /project/biol4585j-yey2sn
@@ -74,7 +75,8 @@ Exactly as it sounds, this is your code play ground! You may code here, run comm
 
 I would like for you to commit to memory the following chain of events to do for these two weeks. **Log in to rivanna --> cd /scratch** ... yep. thats it.
   
-## Creating new folders
+## Part 4. Creating new folders in Rivanna
+
 I want you to be aware that, over the next two weeks, we will be running many many analysis. The inevitable result of this is that you will generate a lot of files. And, trust me, if you plan on a strategy to be tidy, your scratch will get messy real quick... and you wont be able to find your stuff... 
 
 A good strategy to mitigate this is to create folder, with informative names, that help you find your files in a timely and orderly fashion. Lets create our first folder with the command
@@ -83,7 +85,7 @@ mkdir my_first_folder
 ```
 In this case the command is **mkdir** and you are creating a folder named **my_first_folder**. Also, notice that spaces " " will not be used used as part of our code. Instead we will replace all spaces with "_" symbols. So instead of "my_first_folder" we must write "my_first_folder". This is **KEY** becuase spaces " " can mess up code real bad! and we dont want that.. do we?
  
-## Part 2. Exploring and copying files around
+## Part 5. Exploring and copying files around
 
 ### Move into your new folder
 We first want to move into our new folder  "my_first_folder":
@@ -109,7 +111,7 @@ ls
 ```
 Do you see your file?
 
-### Explore properties of the file:
+## Part 6. Explore properties of the file:
 
 * File Size
 
@@ -167,7 +169,7 @@ What do you see?
 *How many DNA/RNA sequences are on file?* 
 *What is the model organism from which these sequences come from?* 
 
-#### Creating a new file
+### Part 7. Creating a new file
 lets say that you want to create a brand new file that only contains the header names. you can do this by modifying our earlier command.
 
 ```
@@ -177,7 +179,8 @@ In this case you are using the unix command `>` to save the output of this comma
 
 **CONFUSING!!**: uh oh! we have encounter the first point were most first-time bioinformaticians get confused. How come that we are using `">"` as the key word of grep, but also, at the same time, we are using `>` (notice that there are no quotes!) to save new files! The reason for this comes from the fact that these two symbols are changing meaning as a function of their position in the code. the `">"` is acting as the argument of the grep command and it is related to the properties of the fasta file. On the other hand, the `>` (no quotes) is an internal command of the operating system that means **save to**.  I know this is can be confusing at first, but don't get discouraged by this. Also, don't worry we wont use too many if these confusing cases in the class... but you should know that these exists... and are actually very common...  The reality is that coding can sometimes be confusing like this and it is just a matter of being careful and paying attention when we code. :) You can do this!!
 
-## Coding challenge (part I of the quiz):
+## Part 8. Coding challenge (part I of the quiz):
+
 As we just explored above, the grep command is a powerful way to mine for data. In our case,  the command `grep ">" Mus.sequence.fasta > justheaders.txt` you could verbally reads this command out loud as: *hey Rivanna, please find (`grep`) all lines with the symbol `">"` in the file `Mus.sequence.fasta` and save it to (`>`) the new file `justheaders.txt`*. The power of commands like grep is that you can use options (sometimes called "flags") to change entire behaviors of the function. For instance, just by adding the flag `-v` the command becomes "find everything that DOES NOT contain a given symbol".  As such:
 
 ```
@@ -210,7 +213,7 @@ man << function >>
 ```
 Give it a try...
 
-## Part 3. Introduction to R (a statistical analysis framework).
+## Part 9. Introduction to R (a statistical analysis framework).
 This is the last thing we will do today. Before we dive into some code lets cover some basics. Up to this point we have been coding in Rivanna itself. In other words we have been talking directly to the supercomputer. A big part of bioinformatics and genomics is to do statistical analysis of DNA sequences. The programming language "R" is famous for having a lot of statistical tools at our disposal. Because of this we will choose to do our statistics in R as opposed to on Rivanna directly. To accomplish this we have to run R on top of Rivanna. I know this can be confusing, we are running Rivanna on top of our computers and then R on top of Rivanna. 
 
 ### How to run a program within Rivanna
@@ -252,10 +255,10 @@ library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
 ## In most super-computers or personal-computers simply
 ## typing library(tidyverse) will do the trick.
 ```
-### The Tidyverse
+## Part 10. The Tidyverse
 The tidyverse is the colloquial name given to a broad suite of R libraries and packages designed to drastically improve the user experience in R and ensure that our analysis pipelines can be easily replicated. We don't have time to do a deep dive into this library but you can learn more about it [here](https://www.tidyverse.org/). 
 
-## The Iris flower datasets
+### The Iris flower datasets
 
 For our first biological analysis (and chance to learn R) we are going to use the iris data set. This dataset gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are _Iris setosa_,_versicolor_, and _virginica_.
 
@@ -292,7 +295,7 @@ iris %>% head(n=10)
 
 **What is up with head(n = 10)?** Wait a minute! didn't we just learn that the `head` command used "flag arguments" `head -n 10`? Why are we seeing `head(n = 10)`? The answer is simple: `head -n 10` is the **UNIX (Rivanna)** language, whereas `head(n = 10)` is the **R ** language. While in unix functions take arguments using flags separated by spaces "-x -n -k", in R functions take arguments inside parenthesis and are often separated by commas. Example `head(n = 10)`. In this class you will have to wire your brain to being bilingual, but, instead of English, Spanish, or French, our languages are going to be unix and R. 
 
-### Moving around Rivanna while inside of R
+## Part 12. Moving around Rivanna while inside of R
 To move around the supercomputer you can use commands:
 ```
 getwd()  #---> this is the same as pwd in unix
@@ -300,7 +303,7 @@ setwd("./<< address >>") #--> this is the same as cd ./<< address >> in unix
 ```
 **A core difference between Rivanna (unix) and R** is that, while in Rivanna you can provide addresses as simnple text `./some/place/here`,  **in R** you have to give addresses in quotes `"./some/place/here"`.
 
-## Filtering data in R 
+## Part 13. Filtering data in R 
 Ok, now we are going to start to data mine our iris dataset. Lets explore some filtering options
 
 ### How many colums and rows do we have?
@@ -389,7 +392,7 @@ filter(Sepal.Width > 3.1)
 | x & y     x AND y               	|
 | isTRUE(x)     test if X is TRUE 	|
 
-### How do we filter for multiple conditions?
+## Part 14. How do we filter for multiple conditions?
 ```
 iris %>%    
 filter(Sepal.Width > 3.1 & Petal.Width < 1.5 & Species != "setosa") 
@@ -423,7 +426,7 @@ mutate(isFavorite = case_when(Species == "versicolor" ~ "Yes", Species != "versi
 
 **case_when()** is a very powerful function that aks R to evaluate whether or not a condition is true and then react accordingly (`Species == "versicolor"`). In this case the reaction (`~`) is to print the word "Yes" or "No". When combined with the function `mutate` it creates a column of "Yes" or "No" as the new column.
 
-## Summarizing data
+## Part 15. Summarizing data
 Now that we are masters of data exploration and manipulation. We can start asking questions about the data. We will start by asking trivial questions about  the data, but we will eventually move into more interesting biological questions. 
 The first thing we need in order to summarize data is **grouping variable**. A grouping variable is basically some aspect of the data that we can use to partition the data. For example, lets partition the data based on whether or not a given species is my favorite or not. We will accomplish this by using the command `group_by()` 
 ```
@@ -498,7 +501,7 @@ SD = sd(Sepal.Length) )        # Notice we have added the name SD =
 # Yes           50  5.94 0.516
 ```
 
-## Visualizing the data using _ggplot_
+## Part 16. Visualizing the data using _ggplot_
 The last exercise we hope to accomplish is to make a graph showcasing our analysis. Data visualization is a fundamental part of genomics and data science. 
 First thing we need to do is to save our summarize pipe into a new object. Lets call it `MyFavoriteIrisFlowers` 
 ```
@@ -555,7 +558,7 @@ ggsave(error_plus_point, file = "error_plus_point.pdf", width = 6, height = 4)
 
 wow! look at that! our point estimates are not very different after all!
 
-## Part 4. Recap
+## Part 16. Recap
 In today's lecture and practicum you have learned 4 core skills for bioinformatics work:
 
 1. How to log in an interact with a supercomputer (aka **HPC**; High Performance Computer)
@@ -563,7 +566,7 @@ In today's lecture and practicum you have learned 4 core skills for bioinformati
 3. You have learned how to use **R-tidyverse** to filter, manipulate, and summarize data.
 4. You have learned how to visualize data using **R-ggplot**
 
-## Part 5. Code Challenge (20 pts)
+## Part 17. Code Challenge (20 pts)
 
 Using you knowledge of R for data manipulation generate the following graph --> A graph showing on the **x-axis** all the species contained in `iris`, on the **y-axis** showing the mean value for `Petal.Length` also include error bars showing the standard deviation. Hint: you will use `group_by()`, `summarize()`, `ggplot(aes())`, `geom_point()`, `geom_errorbar()`, among others. Submit your graph to the homework folder once you are done.
 
