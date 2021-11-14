@@ -193,7 +193,7 @@ grep ">" Mus.sequence.fasta
 grep -v ">" Mus.sequence.fasta 
 ```
 #### What is the challenge? -->  (5 points)
-Your challenge is to create a file named  "noheaders.<< your name >>.txt". This is a file that contains only the DNA/RNA sequence of `Mus.sequence.fasta`. After creating this file I want you to **copy** this file to your **Homework_Drop_off** (this is a folder located at `/project/biol4585j-yey2sn/Homework_Drop_off/<< your name >>`). That's it.
+Your challenge is to create a file named  "noheaders.<< your name >>.txt". This is a file that contains only the DNA/RNA sequence of `Mus.sequence.fasta`. After creating this file I want you to **copy** this file to your **Homework_Drop_off** (this is a folder located at `/project/biol4585j-yey2sn/Challenge_Drop_off/<< your name >>`). That's it.
 
 To recap, to complete this you have to:
 
