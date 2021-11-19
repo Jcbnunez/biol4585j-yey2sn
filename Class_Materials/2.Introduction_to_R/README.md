@@ -434,9 +434,6 @@ wilcox.test(Sepal.Length~isFavorite, data = .)
 
 Want to learn more about the wilcox test? [check out this video](https://www.youtube.com/watch?v=TqCg2tb4wJ0) in which a statisitcian does the wilcox testing **by hand**! 
 
-
-
-
 Now let's look at the results:
 ```
 Wilcoxon rank sum test with continuity correction
@@ -446,10 +443,6 @@ W = 2142.5, p-value = 0.1543
 alternative hypothesis: true location shift is not equal to 0
 ```
 
-## Part 17. Code Challenge (20 pts)
+## Part 8. Code Challenge 
 
 Using you knowledge of R for data manipulation generate the following graph --> A graph showing on the **x-axis** all the species contained in `iris`, on the **y-axis** showing the mean value for `Petal.Length` also include error bars showing the standard deviation. Hint: you will use `group_by()`, `summarize()`, `ggplot(aes())`, `geom_point()`, `geom_errorbar()`, among others. Submit your graph to the homework folder once you are done.
-
-
-
-
