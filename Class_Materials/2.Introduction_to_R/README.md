@@ -421,7 +421,7 @@ ggsave(myqqplot, file = "myqqplot.pdf", width = 6, height = 4)
 ![ggplot qqplot](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Class_Materials/2.Introduction_to_R/Figures/qqplot_iris.png?raw=true)
 
 ### Would you go ahead with a test assume normality with this data?
-The answer is no. This is because our "No" distribution does not follow the QQ normality plot, so you probably should not assume normality with this dataset.  **Advance tip** We can do a _formal_ hypothesis testing of these assumtion using the R function `shapiro.test()`. 
+The answer is no. This is because our "No" distribution does not follow the QQ normality plot, so you probably should not assume normality with this dataset.  **Advanced tip** We can do a _formal_ hypothesis testing of these assumtion using the R function `shapiro.test()`. 
 
 ### How can we test if these distributions are different?
 Since we cannot use Student'T, our next best option is to use `wilcox.test` (a.k.a. _Mann-Whitney's U_). A test which does not assumes normality. 
