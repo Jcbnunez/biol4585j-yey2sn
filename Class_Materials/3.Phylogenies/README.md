@@ -19,7 +19,6 @@ One of the most important concepts in phylogenetics is to understand what "the t
 How do we estimate phylogenetic relationships among species? To do this we often compare and contrasts phenotypes or DNA from different species. The most important aspect of this process is to make sure that our comparisons are "fair". To ensure this, we must compare species at **homologous traits**. The term "homology" refer to the idea of comparing similar characters among and between the species of interest. For example, lets say that you want to build a DNA phylogeny with 10 species, but you only have sequences from gene A in 5 species, and of gene B in the other 5. Could you build a phylogeny with these data combined? The answer is **NO**. This would be an unfair comparison -- you either have 10 sequences of A or 10 of B, but no _Frankensteining_ allowed! 
 
 Understanding what is and isn't homologous can often be a contentious debate, but, for this course, we will use straight forward examples: genes from the animal mitochondrial genome -- yes, _the powerhouse of the cell_.
-![mtDNA](https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Map_of_the_human_mitochondrial_genome.svg/640px-Map_of_the_human_mitochondrial_genome.svg.png)
 
 ## Findings DNA sequences in NCBI
 In today's practicum we will build a species phylogeny using DNA data from the mitochrondrial genome of animals. So, the first question is: "where will we get the data?" .. you should know the answer to this by now! from [NCBI](https://www.ncbi.nlm.nih.gov/)! 
@@ -172,9 +171,9 @@ window=c(120, 200),
 offset = 0.15) -> tree_n_DNA
 
 ggsave(tree_n_DNA, 
-			file = "mytree_and_DNA.pdf",
-			width = 12,
-		  height = 6)
+file = "mytree_and_DNA.pdf",
+width = 12,
+height = 6)
 ```
 Lets  take a loot at the data, now in full display!
    
