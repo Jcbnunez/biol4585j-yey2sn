@@ -142,7 +142,7 @@ tree <- reroot
 ```
 ### Step 2. Graph the base topology of the tree
 ```
-ggtree(tree, layout="circular") -> mytree
+ggtree(tree) -> mytree
 ggsave(mytree, file = "mytree.pdf")
 ```
 What are we seeing here?
@@ -181,4 +181,8 @@ height = 6)
 Lets  take a loot at the data, now in full display!
    
 ## Activity
+Today's coding challenge is to use ggplot to annotate clades in the pylogenetic tree we just made. For simplicity use the object names `mytree`.
 
+The `ggtree` library offer the function `geom_strip()` as a tool to annotate trees. The basic structure of the function is `geom_strip("species_1", "species_2", label="Group Name" )`. Use your knowledge of the ggplot structure, using the `+` operator to add labels for "pongo", "gorilla", and "pan".
+
+### Submit your work to the activities folder in Rivanna as YourName.edges.pdf
