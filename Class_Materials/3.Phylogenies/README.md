@@ -35,6 +35,9 @@ Generally speaking we are looking for _cytochrome oxidase subunit 1 (COI) gene, 
 ![Size_search.png](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Class_Materials/3.Phylogenies/Figures/Size_search.png?raw=true)
 ### How to download DNA data. 
 You can save your sequences to a FASTA file using the **send to option**. We will do a demonstration in class.  ![send to](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Class_Materials/3.Phylogenies/Figures/send_to_fasta.png?raw=true)
+
+**Data will download to your home/Downloads folder**
+
 ## Aligning sequences 
 So you have DNA sequences... good! Now, how do we turn that into a tree?! Remember that to build a good phylogenetic tree we need to ensure that our DNA sequences represent a fair comparison. In DNA terms, this means that our DNA sequences are correctly aligned (or aligned in a homologous fashion). 
 
