@@ -2,6 +2,7 @@
 
 ## What are genomes?
 Genomes are the blue print for all life on earth. They are made up of protein-coding genes, non-coding-regulatory sequences, and unknown-purpose sequences (often called "junk DNA", but this is a misnomer). As biologist information contain in genomes is a treasure trove about how are phenotype encoded and passed on from one generation to another, about the origin of disease, and about how natural selection shapes form and function in the wild.
+
 ![wiki genome](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Class_Materials/4.Genome_assembly/figures/genome_comp.png?raw=true)
 
 An important element to know is that genomes contain a lot of evolutionary information. Because of the way that genetic transmission works, genomes contain information, not just about the individuals themselves, but also about: their parents, their grandparents, their great grandparents, their ancestors in general, and even about the species of origin! This is why genome assembly and analysis (a.k.a. _genomics_) is such an exciting field at the forefront of biology! 
@@ -10,7 +11,9 @@ An important element to know is that genomes contain a lot of evolutionary infor
 Genome assembly is the process of using DNA sequencing reads (short or long) in order to reconstruct a genome to the level of chromosomes. Or at least that is the dream! The reality is a bit more complex.  Here is a review with some additional information for [optional reading](https://www.nature.com/articles/nmeth.1935). For a video introduction to genome assembly check [here](https://www.youtube.com/watch?v=5wvGapmA5zM).
 
 Here is an example adapted from [Baker  2012](https://www.nature.com/articles/nmeth.1935):
+
 ![Genome assembly](https://media.springernature.com/relative-r300-703_m1050/springer-static/image/art%3A10.1038%2Fnmeth.1935/MediaObjects/41592_2012_Article_BFnmeth1935_Figb_HTML.jpg)
+
 ## Assess the quality of the starting material (GIGO)
 Our capacity to build genome assemblies is directly tied to the quality of the starting material. In this case reads. As such, before we dive into the details of genome assembly we need to become familiar with DNA reads. Lets take a look at the reads we will use today `raw_R1.fastq`
 
