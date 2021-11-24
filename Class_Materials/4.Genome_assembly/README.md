@@ -70,7 +70,9 @@ Recall from our reading of Shendure et al., when we sequence DNA, we often use a
 
 ## Assembly of long reads uses "OLC" (Overlap-Layout-Consensus )
 Uses a three step approach to assembly.
+
 ![OLC](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Class_Materials/4.Genome_assembly/figures/OLC.png?raw=true)
+
 ## Assembly of short reads uses _de Bruijn_ graphs
 While the concept of OLC is pretty intuitive, it only really works with long reads. When reads become too short the total number of potential overlaps explodes exponentially and the assembly becomes computationally untrackable.   
 
