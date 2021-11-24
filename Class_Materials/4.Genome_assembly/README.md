@@ -2,7 +2,7 @@
 
 ## What are genomes?
 Genomes are the blue print for all life on earth. They are made up of protein-coding genes, non-coding-regulatory sequences, and unknown-purpose sequences (often called "junk DNA", but this is a misnomer). As biologist information contain in genomes is a treasure trove about how are phenotype encoded and passed on from one generation to another, about the origin of disease, and about how natural selection shapes form and function in the wild.
-![wiki genome](https://upload.wikimedia.org/wikipedia/commons/a/ad/Components_of_the_human_genome.png)
+![wiki genome](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Class_Materials/4.Genome_assembly/figures/genome_comp.png?raw=true)
 
 An important element to know is that genomes contain a lot of evolutionary information. Because of the way that genetic transmission works, genomes contain information, not just about the individuals themselves, but also about: their parents, their grandparents, their great grandparents, their ancestors in general, and even about the species of origin! This is why genome assembly and analysis (a.k.a. _genomics_) is such an exciting field at the forefront of biology! 
 
