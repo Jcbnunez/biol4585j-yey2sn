@@ -406,7 +406,7 @@ We can check for signatures of normality using a graphical device call a QQplot,
 
 Want to learn more about QQplots? [check out this video](https://www.youtube.com/watch?v=okjYjClSjOg)
 
-Lets divive the data inot yeas and nays:
+Lets divide the data into "yeas" and "nays":
 
 ```
 iris %>%    
