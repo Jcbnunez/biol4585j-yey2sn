@@ -174,5 +174,5 @@ pca_gg_figure_pool_with_meta
 ##Note --> We have to call it "sampleId" so that both objects have a common column
 ```
 
-Using linear models and ANOVAs, can you determine if either year, or, season play a role in PCA signals of Dimensions 1 and 2? Provide your answer in the Collab portal.
+Using linear models and ANOVAs, can you determine if either year, or, season play a role in PCA signals of Dimensions 1 and 2? Provide your answer in the Collab portal. Upload a document showing the variable tested (Season, Year) and the P value of the ANOVA. I expect to see 4 results Dim 1 -> Season, Dim 1 -> Year, Dim 2 -> Season, Dim 2 -> Year. Include a statement clearly saying "Variable X appears to be statistically correlated to Dim X" ... alternatively, "no variables show statistical correlation to Dim x ...". Include your name and the name of your partners. All margins must be 0.5 inches.
 
