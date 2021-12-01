@@ -19,7 +19,7 @@ Material for the course UVA biol4585j (Evolutionary Genomics)
 	Memory Request in GB:--> 24
 	Allocation (SUs): --> leave empty
 	Optional: GPU type for GPU partition**: --> leave empty
-	Optional: Slurm Option: --> leave empty
+	Optional: Slurm Option: --> --reservation=biol4585
 	Optional: Group: --> write biol4585j-yey2sn
 	```
 5. Once you have these entered these options go ahead and press **LAUNCH**
