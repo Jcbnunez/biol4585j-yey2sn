@@ -36,6 +36,10 @@ Check out the manual at: https://vcftools.github.io/man_latest.html
 
 ### Run vcftools on the data to estimate ![eq ](https://latex.codecogs.com/gif.latex?\large&space;\color{Magenta}\pi)
 ```
+#copy vcf from previous lesson
+cp /project/biol4585j-yey2sn/Files/Day_6/DGRP2_freeze2.2L.flt.thin.recode.vcf ./
+
+#run vcftools to estimate pi
 vcftools --vcf DGRP2_freeze2.2L.flt.thin.recode.vcf \
 --window-pi 100000 \
 --window-pi-step 50000 \

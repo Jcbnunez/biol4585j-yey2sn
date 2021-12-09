@@ -64,7 +64,7 @@ The action of recent selection in genomes has the capacity to alter the levels o
 First, lets copy the vcf file
 
 ```
-cp /project/biol4585j-yey2sn/Files/Day_7/hardsweep.vcf ./
+cp /project/biol4585j-yey2sn/Files/Day_8/hardsweep.vcf ./
 ```
 
 Now lets, estimate pi
