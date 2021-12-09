@@ -72,16 +72,14 @@ Now lets, estimate pi
 vcftools --vcf hardsweep.vcf \
 --window-pi 50000 \
 --window-pi-step 25000 \
---out Calculate_pi
+--out Calculate_pi_pos_sel
 ```
 
 Estimate Tajimas'D
 ```
 vcftools --vcf hardsweep.vcf \
 --TajimaD 50000 \
---maf 0.01 \
---out taj_D
-
+--out Calculate_taj_D_pos_sel
 ```
 
 ### Lets graph and discuss the results 
