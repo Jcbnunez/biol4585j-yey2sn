@@ -55,3 +55,35 @@ fisher.test(Gene_Matrix)
 
 Do Mouse or Human show significant signatures of ancient selection?
 
+## Practicum: Detecting recent selection by uncovering selective sweeps in genomes
+
+The action of recent selection in genomes has the capacity to alter the levels of nucleotide diversity, ![eq ](https://latex.codecogs.com/gif.latex?\large&space;\color{Magenta}\pi), and Tajima's D in populations. What is the difference between the neutral accumulation of mutations (which normally drives ![eq ](https://latex.codecogs.com/gif.latex?\large&space;\color{Magenta}\pi)) and selection? The answer is that selection acts regionally! Lets explore this process
+
+### Explore nucleotide diversity and Tajimas D in a genomes which recently underwent selection:
+
+First, lets copy the vcf file
+
+```
+cp /project/biol4585j-yey2sn/Files/Day_7/hardsweep.vcf ./
+```
+
+Now lets, estimate pi
+```
+vcftools --vcf hardsweep.vcf \
+--window-pi 50000 \
+--window-pi-step 25000 \
+--out Calculate_pi
+```
+
+Estimate Tajimas'D
+```
+vcftools --vcf hardsweep.vcf \
+--TajimaD 50000 \
+--maf 0.01 \
+--out taj_D
+
+```
+
+### Lets graph and discuss the results 
+
+
