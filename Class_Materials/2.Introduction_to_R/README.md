@@ -6,9 +6,9 @@ In today's class we will learn how to do statistical analyses using the R progra
 In order to work in R  we have to first load the program itself and all its dependencies. In Rivanna we call this to "load of module", or `module load`:
 
 ```
-module load intel/18.0 intelmpi/18.0
-module load goolf/7.1.0_3.1.4
-module load gdal proj R/4.0.0
+module load gcc/7.1.0
+module load openmpi/3.1.4
+module load R/4.1.1
 # ^ These are all the modules needed to run R in Rivanna
 ```   
 Now that we have loaded the modules lets activate `R`. This is done by simply typing:
@@ -34,9 +34,14 @@ The short answer is pretty much everything. To be clear the commands we just pra
 ### Why R ?
 The power of R lies in in libraries. Basically there is a large community of scientists who actively develop libraries in R to do a variety of fancy statistical analysis. As of ~2020 there are an estimated 10,000 libraries in circulation (see [https://cran.r-project.org/](https://cran.r-project.org/) and [https://www.bioconductor.org/](https://www.bioconductor.org/)). As you may imagine you dont need all the packages all the time, so R allows you to only load the packages that you need, or want. Lets load some packages:
 ```
-library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
+library(backports, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(tzdb, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(withr, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(rstudioapi, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
 #We will also load "ggpubr" a supporting library
-library(ggpubr, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
+library(ggpubr, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 
 ## Notice that the option lib.loc is only required because
 ## we are using an educational partition. 
