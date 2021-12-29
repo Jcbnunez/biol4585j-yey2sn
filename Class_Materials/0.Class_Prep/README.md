@@ -15,7 +15,7 @@
 	Memory Request in GB:--> 24
 	Allocation (SUs): --> leave empty
 	Optional: GPU type for GPU partition**: --> leave empty
-	Optional: Slurm Option: --> leave empty
+	Optional: Slurm Option: --> leave empty for now
 	Optional: Group: --> write biol4585j-yey2sn
 	```
 5. Once you have these entered these options go ahead and press **LAUNCH**
