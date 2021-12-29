@@ -116,7 +116,10 @@ In this command the `-s` flag indicated the input fasta file. Also, the `-m TEST
 ## Lets construct our tree
 
 ### Step 1. Choose an out-group
-Based on our understanding of the data what organism should be the proper outgroup? **How can we do this?** Lets explore the functionalities of [**NCBI-BLAST**](https://blast.ncbi.nlm.nih.gov/Blast.cgi) to identify the confidence of a sequence's identity. Lets also explore [**timetree**](http://www.timetree.org/) in order to explore all fossil and phylogenetic evidence available for our taxa.
+Based on our understanding of the data what organism should be the proper outgroup? **How can we do this?** Lets explore the functionalities of two core databases in evolutionary biology:
+
+1. [**NCBI-BLAST**](https://blast.ncbi.nlm.nih.gov/Blast.cgi) an online program that searches all NIH databases to identify the confidence of a sequence's identity. 
+2. [**timetree**](http://www.timetree.org/) a repository used to explore all currently known (i.e., published) phylogenetic relationships among taxa -- based on a combination of both fossil and molecular evidence.
 
 #### Can we replicate the tree from _timetree_ using our data?
 
