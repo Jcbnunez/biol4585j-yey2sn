@@ -73,7 +73,7 @@ This is a folder which I manage and contains most, if not all, of the course mat
 ### /scratch
 Exactly as it sounds, this is your code play ground! You may code here, run commands here, create folders and files. Just have fun! -- I bet this is the space where you would be spending most of your time during the class. 
 
-I would like for you to commit to memory the following chain of events to do for these two weeks. **Log in to rivanna --> cd /scratch** ... yep. thats it.
+I would like for you to commit to memory the following chain of events to do for these two weeks. **Log in to rivanna --> cd /scratch/username** ... yep. thats it.
   
 ## Part 4. Creating new folders in Rivanna
 
