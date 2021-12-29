@@ -48,6 +48,13 @@ Sequence alignment is done through a process of global optimization [Learn more 
 ### Implementing global aligments in MAFFT
  For our particular case, this process will be automated using the program [mafft](https://mafft.cbrc.jp/alignment/software/).
 
+## Logging into Rivanna and moving into our scratch folder
+```
+cd /scratch/'username'
+mkdir phylogenetics_module
+cd phylogenetics_module
+```
+
 ## Making an alignment of homologous sequences
 Lets begin by copying a fasta file to our working directory
 ```
@@ -122,16 +129,16 @@ We have completed our analysis of phylogenetic inference and it is contained in 
 
 ### Lets get into R!
 ```
-module load intel/18.0 intelmpi/18.0
-module load goolf/7.1.0_3.1.4
-module load gdal proj R/4.0.0
+module load gcc/7.1.0
+module load openmpi/3.1.4
+module load R/4.1.1
 
 R
 ```
 ### Lets load the package ggtree
 ```
-library(ggtree, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
-library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
+library(ggtree, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 ```
 
 ### Step 1. Import the tree data into R
