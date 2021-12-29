@@ -34,7 +34,7 @@ The short answer is pretty much everything. To be clear the commands we just pra
 ### Why R ?
 The power of R lies in in libraries. Basically there is a large community of scientists who actively develop libraries in R to do a variety of fancy statistical analysis. As of ~2020 there are an estimated 10,000 libraries in circulation (see [https://cran.r-project.org/](https://cran.r-project.org/) and [https://www.bioconductor.org/](https://www.bioconductor.org/)). As you may imagine you dont need all the packages all the time, so R allows you to only load the packages that you need, or want. Lets load some packages:
 ```
-library(backports, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+#Load the tidyverse package
 library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 
 #We will also load "ggpubr" a supporting library
