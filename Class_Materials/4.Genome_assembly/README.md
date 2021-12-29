@@ -10,7 +10,9 @@ An important element to know is that genomes contain a lot of evolutionary infor
 ## What is genome assembly from DNA reads
 Genome assembly is the process of using DNA sequencing reads (short or long) in order to reconstruct a genome to the level of chromosomes. Or at least that is the dream! The reality is a bit more complex.  Here is a review with some additional information for [optional reading](https://www.nature.com/articles/nmeth.1935). For a video introduction to genome assembly check [here](https://www.youtube.com/watch?v=5wvGapmA5zM).
 
-Here is an example adapted from [Baker  2012](https://www.nature.com/articles/nmeth.1935):
+![the genomics dreams vs reality](https://media.springernature.com/relative-r300-703_m1050/springer-static/image/art%3A10.1038%2Fnmeth.1935/MediaObjects/41592_2012_Article_BFnmeth1935_Figa_HTML.jpg?as=webp)
+
+Here is an example of a work pipeline adapted from [Baker  2012](https://www.nature.com/articles/nmeth.1935):
 
 ![Genome assembly](https://media.springernature.com/relative-r300-703_m1050/springer-static/image/art%3A10.1038%2Fnmeth.1935/MediaObjects/41592_2012_Article_BFnmeth1935_Figb_HTML.jpg)
 
