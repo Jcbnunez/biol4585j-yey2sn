@@ -73,7 +73,7 @@ For more details on the data see:
 ### Exploring data in R & using pipes (%>%) to execute functions
 Similar to Rivanna (Unix) we can use exploratory commands to get a sense of what the data looks like. 
 
-**NOTE**: `library(tidiverse , lib.loc = "/project/biol4585j-yey2sn/R/4.0/"` must be activated for any of this code to work. 
+**NOTE**: `library(tidiverse , lib.loc = ...)` must be activated for any of this code to work. 
 
 ### See the first N colums of iris
 ```
