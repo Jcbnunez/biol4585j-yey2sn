@@ -118,6 +118,8 @@ In this command the `-s` flag indicated the input fasta file. Also, the `-m TEST
 ### Step 1. Choose an out-group
 Based on our understanding of the data what organism should be the proper outgroup? **How can we do this?** Lets explore the functionalities of [**NCBI BLAST**](https://blast.ncbi.nlm.nih.gov/Blast.cgi) to identify the confidence of a sequence's identity. Lets also explore [timetree](http://www.timetree.org/) in order to explore all fossil and phylogenetic evidence available for our taxa.
 
+#### Can we replicate the tree from _timetree_ using our data?
+
 ### Step 2. Run your analysis!
 ```
 $IQtree -s mitochndrial.sequences.aln.fasta -pre PhyloTree -alrt 1000 -bb 1000 -o <<OUTGROUP>>
