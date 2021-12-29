@@ -51,7 +51,7 @@ Try it out!
 
 Ok, let go to a different place altogether. This time around we want to go to a special folder called **scratch**. 
 ```
-cd /scratch
+cd /scratch/"username"
 ```
 **Yes, you will need the "/" to travel around, just typing cd scratch wont work!**
 
