@@ -361,7 +361,7 @@ This plot shows the point estimates of our `summarize(MEAN = ...)` analysis. But
 
 ```
 MyFavoriteIrisFlowers %>%
-ggplot(aes(x=isFavorite, y=MEAN, ymin = MEAN-SD, ymax = MEAN+SD)) +
+ggplot(aes(x=isFavorite, y=MEAN)) +
 geom_point(size = 3)  -> point_estimates
 
 ggsave(point_estimates, file = "point_estimates.pdf", width = 6, height = 4)
