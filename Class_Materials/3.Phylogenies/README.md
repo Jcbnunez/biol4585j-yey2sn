@@ -143,6 +143,7 @@ R
 ### Lets load the package ggtree
 ```
 library(ggtree, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(ape, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 ```
 
@@ -150,9 +151,6 @@ library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 ```
 tree_file <- "./PhyloTree.contree"
 tree <- read.tree(tree_file)
-
-install.packages('ape', lib='/project/biol4585j-yey2sn/R/4.1.1/', repos='https://cran.case.edu')
-
 
 tree <- root(tree, outgroup = "Hoolock hoolock", resolve.root = TRUE)
 ```
