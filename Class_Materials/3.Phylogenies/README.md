@@ -147,6 +147,12 @@ R
 ```
 library(ggtree, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(ape, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
+install.packages('phytools', lib='/project/biol4585j-yey2sn/R/4.1.1/', repos='https://cran.case.edu')
+
+library(phytools, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
+
 library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 ```
 
