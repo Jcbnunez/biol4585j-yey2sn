@@ -4,6 +4,9 @@
 
 Phylogenetics is the study of relationships among the species on the tree of life, a task made possible under the assumption that all current life on earth shares a common ancestor. Other than understanding the evolutionary history of species, in general, phylogenies have multiple specific applications including: understanding the history of populations through time, epidemiology, cancer biology, as well as the evolution of language.   
 
+### For example, the evolutionary rates of the COVID-causing (SARS-CoV-2) virus:
+[covid variants evolution](https://scontent.fric1-1.fna.fbcdn.net/v/t39.30808-6/269372108_10159198490925589_1788491593852369443_n.png?_nc_cat=107&ccb=1-5&_nc_sid=9267fe&_nc_ohc=NDDq5TIPsC8AX8iYJvZ&_nc_ht=scontent.fric1-1.fna&oh=00_AT_vFj3j3WEyA3-Iot7An_H21DHTCIWAWv0p9AEE5EG4IQ&oe=61D0D3F7)!
+
 ### Reading a phylogeny
 ![basics of trees](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Class_Materials/3.Phylogenies/Figures/trees_basic.2.png?raw=true) 
 One of the most important concepts in phylogenetics is to understand what "the trees are telling you". To this end, you should become familiar with the following parts of a phylogenetic tree:
