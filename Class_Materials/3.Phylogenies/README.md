@@ -151,8 +151,7 @@ library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 ```
 tree_file <- "./PhyloTree.contree"
 tree <- read.tree(tree_file)
-
-tree <- root(tree, outgroup = "Hoolock hoolock", resolve.root = TRUE)
+tree <- root(tree, outgroup = "Hoolock_hoolock", resolve.root = TRUE)
 ```
 ### Step 2. Graph the base topology of the tree
 ```
