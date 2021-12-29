@@ -14,7 +14,7 @@ Material for the course UVA biol4585j (Evolutionary Genomics)
 4. Clicking on Desktop will give you the option to create an interactive session with the supercomputer. Before you can do that you need to tell the supercomputer what are the parameters of your interactive session. These are:
 	```
 	Rivanna partition: --> select "instructional"
-	Number of hours: --> 3
+	Number of hours: --> 6
 	Number of cores:--> 3 
 	Memory Request in GB:--> 24
 	Allocation (SUs): --> leave empty
