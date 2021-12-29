@@ -60,6 +60,8 @@ You can type
 ```
 ?iris
 
+#press "q" to quit the readme
+
 # In R, you can learn more details about a package or function by using the ? commmand
 ```
 **what is going on here??** By typing `iris` we are summoning an object with data that is preloaded into R. Basically `iris`  = our data! In future classes we will learn how to make our own objects!
