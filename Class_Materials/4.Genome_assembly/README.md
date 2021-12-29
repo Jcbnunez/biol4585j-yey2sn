@@ -25,6 +25,13 @@ AATGTTGTCACTTGGATTCAAATGACATTTTAAATCTAATTATTCATGAATCGAACTAGTACGAAATGCAATGAGCATCT
 ```
 We can learn more about quality encoding [here](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm#)
 
+## Logging into Rivanna and moving into our scratch folder
+```
+cd /scratch/'username'
+mkdir genome_assmb_module
+cd genome_assmb_module
+```
+
 Now, lets take a look for ourselves: 
 ```
 cp /project/biol4585j-yey2sn/Files/Day_4/Fasta_files/raw_R1.fastq ./
@@ -99,15 +106,15 @@ SparseAssembler k $K GS 100000 f raw_R1.fastq
 You can load files into R using the `fread` function in the package `datatable`
 
 ```
-module load intel/18.0 intelmpi/18.0
-module load goolf/7.1.0_3.1.4
-module load gdal proj R/4.0.0
+module load gcc/7.1.0
+module load openmpi/3.1.4
+module load R/4.1.1
 R
 ```
 In R:
 ```
-library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
-library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
+library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 ```
 Now lets use the function `fread` to load in the file `CovHist.txt`, a file generated as part of the `SparseAssembler` command.
 ```
