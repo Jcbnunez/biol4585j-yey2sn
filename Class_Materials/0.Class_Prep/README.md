@@ -27,7 +27,7 @@
 ### Check out [the three core apps used in this class (Video tutorial)](https://youtu.be/BDu_vD09KgY)
 To complete this course you will make heavy use of three applications in Rivanna: the Terminal, the Pluma Text Editor, The Firefox Web-browser.
 
-![Three apps for this class](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Rivanna_Practicums/0.Class_Prep/Figures/three_apps.png)
+![Three apps for this class](https://github.com/Jcbnunez/biol4585j-yey2sn/blob/main/Class_Materials/0.Class_Prep/Figures/three_apps.png?raw=true)
 **Terminal:** We will use this app to execute our code
 
 **Pluma Text Editor:** We will use this app to write our code
