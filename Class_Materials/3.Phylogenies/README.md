@@ -116,7 +116,7 @@ In this command the `-s` flag indicated the input fasta file. Also, the `-m TEST
 ## Lets construct our tree
 
 ### Step 1. Choose an out-group
-Based on our understanding of the data what organism should be the proper outgroup?
+Based on our understanding of the data what organism should be the proper outgroup? **How can we do this?** Lets explore the functionalities of [**NCBI BLAST**](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 
 ### Step 2. Run your analysis!
 ```
