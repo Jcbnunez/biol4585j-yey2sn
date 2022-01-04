@@ -39,7 +39,7 @@ library(backports, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(tzdb, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(withr, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(rstudioapi, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
-library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/“)
+library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 
 
 #We will also load "ggpubr" a supporting library
