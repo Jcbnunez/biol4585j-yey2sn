@@ -39,8 +39,9 @@ library(backports, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(tzdb, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(withr, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(rstudioapi, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(labeling, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(farver, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
-
 
 #We will also load "ggpubr" a supporting library
 library(ggpubr, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
@@ -241,9 +242,6 @@ As a graphical tool, ggplot has rules of its own that we need to understand. Any
 
 #### Lets view a example using a "points plot"
 ```
-library(labeling, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
-library(farver, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
-
 iris %>%
 ggplot(aes(x=Species, y=Sepal.Length)) +
 geom_point(size = 3) -> just_points
