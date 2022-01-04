@@ -241,6 +241,9 @@ As a graphical tool, ggplot has rules of its own that we need to understand. Any
 
 #### Lets view a example using a "points plot"
 ```
+library(labeling, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(farver, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
 iris %>%
 ggplot(aes(x=Species, y=Sepal.Length)) +
 geom_point(size = 3) -> just_points
