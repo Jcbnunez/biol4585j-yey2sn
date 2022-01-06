@@ -109,7 +109,7 @@ qual <- fread("./Qualimap_myAln/raw_data_qualimapReport/mapping_quality_across_r
 
 names(cove)[1] = "position"
 names(qual)[1] = "position"
-names(qual)[2] = "quality"
+names(qual)[2] = "Quality"
 
 ```
 In both of these files the first column is always the genomic position and the second column is always is either the coverage or the quality score, respectively. 
