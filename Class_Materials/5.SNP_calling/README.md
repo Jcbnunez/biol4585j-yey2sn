@@ -87,6 +87,8 @@ samtools index my_Alignment.flt.srt.rmdp.bam
 # Quality Check
 $qualimap bamqc -bam my_Alignment.flt.srt.rmdp.bam  -outdir ./Qualimap_myAln 
 ```
+Lets look over these quality reports
+
 ## Step 9. from mapped reads to mutations
 For our final step, we are going to use a mutation discovery algorithm to find the mutations along the genome
 
@@ -98,8 +100,14 @@ bcftools mpileup -Ou -f reference_sequence.fasta -A my_Alignment.flt.srt.rmdp.ba
 Your challenge today is to reproduce the graphs **mapping_quality_across_reference** and **coverage_across_reference**. You will find the raw data for these here:
 
 ```
-./Qualimap_myAln/raw_data_qualimapReport/coverage_across_reference.txt
-./Qualimap_myAln/raw_data_qualimapReport/mapping_quality_across_reference.txt
+library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
+cove <- fread("./Qualimap_myAln/raw_data_qualimapReport/coverage_across_reference.txt")
+qual <- fread("./Qualimap_myAln/raw_data_qualimapReport/mapping_quality_across_reference.txt")
+
+names(cove)[1] = "position"
+names(qual)[1] = "position"
+
 ```
 In both of these files the first column is always the genomic position and the second column is always is either the coverage or the quality score, respectively. 
 
