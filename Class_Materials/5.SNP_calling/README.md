@@ -97,9 +97,7 @@ bcftools mpileup -Ou -f reference_sequence.fasta -A my_Alignment.flt.srt.rmdp.ba
 ```
 
 ## Challenge
-Your challenge today is:
-
-First, to reproduce the graphs **mapping_quality_across_reference** and **coverage_across_reference**. You will find the raw data for these here:
+Your challenge today is to reproduce the graphs **mapping_quality_across_reference** and **coverage_across_reference**. You will find the raw data for these here:
 
 ```
 library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
@@ -116,4 +114,3 @@ In both of these files the first column is always the genomic position and the s
 
 ### For the graph, I want to see, two line graphs, one showing on the y-axis the coverage, and the other one the quality. In both cases, the x-axis should be genomic position.
 
-Second, please show whether there is a correlation 
