@@ -97,7 +97,7 @@ bcftools mpileup -Ou -f reference_sequence.fasta -A my_Alignment.flt.srt.rmdp.ba
 ```
 
 ## Challenge
-Your challenge today is a two parter:
+Your challenge today is:
 
 First, to reproduce the graphs **mapping_quality_across_reference** and **coverage_across_reference**. You will find the raw data for these here:
 
@@ -107,8 +107,8 @@ library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 cove <- fread("./Qualimap_myAln/raw_data_qualimapReport/coverage_across_reference.txt")
 qual <- fread("./Qualimap_myAln/raw_data_qualimapReport/mapping_quality_across_reference.txt")
 
-names(cove)[1] = "position"
-names(qual)[1] = "position"
+names(cove)[1] = "Position"
+names(qual)[1] = "Position"
 names(qual)[2] = "Quality"
 
 ```
