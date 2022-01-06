@@ -104,6 +104,14 @@ K=? # <----- declare here the k-mer value you have been given
 
 SparseAssembler k $K GS 100000 f raw_R1.fastq
 ```
+
+## Follow-up tools
+
+1. You can assess the quality of genome assemblies using [QUAST](http://quast.sourceforge.net/quast.html). An online version of QUAST can be found [here](http://cab.cc.spbu.ru/quast/)
+2. You can check the gene completeness of your assembly using [BUSCO](https://busco.ezlab.org/). Busco works by identifying Universal Single Copy Ortholog genes ![fig](https://busco.ezlab.org/home/busco_sampling.png). 
+3. You can explore existing genomes using the [UCSB genome browser](https://genome.ucsc.edu/cgi-bin/hgGateway)
+
+
 ## Activity
 You can load files into R using the `fread` function in the package `datatable`
 
