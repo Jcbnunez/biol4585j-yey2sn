@@ -112,5 +112,5 @@ names(qual)[2] = "Quality"
 ```
 In both of these files the first column is always the genomic position and the second column is always is either the coverage or the quality score, respectively. 
 
-### For the graph, I want to see, two line graphs, one showing on the y-axis the coverage, and the other one the quality. In both cases, the x-axis should be genomic position.
+### For the graph, I want to see, two line graphs, one showing on the y-axis the coverage, and the other one the quality. In both cases, the x-axis should be genomic position. The line in the coverage graph should be red and the one in the quality graph should be blue. The coverage graph should have a dotted [linetype](http://sape.inf.usi.ch/quick-reference/ggplot2/linetype) and have a size of 2. The quality one, should be dashed and also have a size of 2. Lastly, the coverage graph should have a "classic" [theme](https://ggplot2.tidyverse.org/reference/ggtheme.html), and the quality one should have a "minimal" theme. You can add titles to each of your graph using the  +  ggtitle("title", subtitle ="subtitle") option.
 
