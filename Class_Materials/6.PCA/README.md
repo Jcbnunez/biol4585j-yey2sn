@@ -15,10 +15,18 @@ As inputs we will use VCF files. The types of files which we generated in our la
 
 ### Loading VCF data into R
 ```
-library(vcfR, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
-library(FactoMineR, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
-library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
-library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.0/")
+library(vcfR, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(FactoMineR, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
+library(backports, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(tzdb, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(withr, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(rstudioapi, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(labeling, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(farver, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
+
+library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 
 #read the vcf file
 read.vcfR("/project/biol4585j-yey2sn/Files/Day_6/DGRP2_freeze2.2L.flt.thin.recode.vcf") -> input_vcf
