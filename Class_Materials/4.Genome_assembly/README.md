@@ -116,6 +116,13 @@ R
 In R:
 ```
 library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
+library(backports, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(tzdb, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(withr, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(rstudioapi, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(labeling, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(farver, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 ```
 Now lets use the function `fread` to load in the file `CovHist.txt`, a file generated as part of the `SparseAssembler` command.
