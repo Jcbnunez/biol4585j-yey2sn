@@ -55,7 +55,7 @@ vcf_table_flt[1:20,1:10]
 PCA(vcf_table_flt, 
 	graph = FALSE,
 	scale.unit = F,
-	ncp=5 ) -> pca_fig
+	ncp=100 ) -> pca_fig
 ```
 
 ## Plot the graph
@@ -132,6 +132,21 @@ lm_model <- lm(Dim.1 ~ In_2L_t, data = pca_fig_with_inv)
 anova(lm_model)
 ```
 What can we  conclude from this analysis?
+
+## Multiple analysis correction
+```
+out_list=list()
+
+for(i in 1:100){
+
+lm_model <- lm(pca_fig_with_inv[,i] ~ In_2L_t, data = pca_fig_with_inv)
+anova(lm_model) -> tmp
+out_list[[i]] = tmp$`Pr(>F)`[1]
+
+}
+
+```
+
 
 # PCA with allele frequencies (populations)
 Instead of genotypes, we can use allele frequencies to build our PCAs. Allele frequencies are the the proportion of the genotype counts in populations. For example if there are 50 copies of an allele in a population of 100 diploid individuals the allele frequency is 25%. **Why?!** Because diploids have 2 chromosomes per individual so there are 200 possible chromosomes an allele can inhabit, and since we observe 50, then the allele frequency is:
