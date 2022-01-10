@@ -27,6 +27,7 @@ library(withr, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(rstudioapi, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(labeling, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(farver, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 
 
 library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
