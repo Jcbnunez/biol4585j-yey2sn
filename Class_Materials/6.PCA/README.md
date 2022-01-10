@@ -44,7 +44,7 @@ my_genind@tab %>%
 as.data.frame -> vcf_table
 
 #Do an additional filtering step (this is related to the way that R load the data) 
-vct_table[,grep(".0", names(vct_table))] -> vcf_table_flt
+vcf_table[,grep(".0", names(vct_table))] -> vcf_table_flt
 ```
 Lets take a look at the output.
 ```
