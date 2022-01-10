@@ -178,7 +178,7 @@ Building a PCA from allele frequencies is not that different from the genotype v
 
 ## Input allele frequencies
 ```
-allele_freqs <- load("/project/biol4585j-yey2sn/Files/Day_6/allele_freqs_dat.Rdata")
+load("/project/biol4585j-yey2sn/Files/Day_6/allele_freqs_dat.Rdata")
 ```
 Lest examine this file
 ```
