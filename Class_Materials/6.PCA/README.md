@@ -145,6 +145,8 @@ out_list[[i]] = tmp$`Pr(>F)`[1]
 
 }
 
+all.pvals = unlist(out_list)
+
 ```
 
 
