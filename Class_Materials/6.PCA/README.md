@@ -15,6 +15,9 @@ As inputs we will use VCF files. The types of files which we generated in our la
 
 ### Loading VCF data into R
 ```
+library(ade4, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(adegenet, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
 library(vcfR, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(FactoMineR, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 
