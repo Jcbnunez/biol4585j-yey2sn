@@ -147,6 +147,25 @@ out_list[[i]] = tmp$`Pr(>F)`[1]
 
 all.pvals = unlist(out_list)
 
+
+data.frame(dim=1:100, p.val =all.pvals  ) %>%
+ggplot(aes(x= dim, y=  -log10(p.val))) +
+geom_hline(yintercept = -log10(0.05), color = "red" ) +
+geom_point() ->
+all_ps
+
+ggsave(all_ps, file = "all_ps.pdf")
+
+
+
+data.frame(dim=1:100, p.val =p.adjust(all.pvals, method = "bonferroni")  ) %>%
+ggplot(aes(x= dim, y=  -log10(p.val))) +
+geom_hline(yintercept = -log10(0.05), color = "red" ) +
+geom_point() ->
+all_ps_bon
+
+ggsave(all_ps_bon, file = "all_ps_bon.pdf")
+
 ```
 
 
