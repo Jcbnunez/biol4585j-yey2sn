@@ -20,6 +20,7 @@ library(adegenet, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 
 library(vcfR, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(FactoMineR, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(memuse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 
 library(backports, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 library(tzdb, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
