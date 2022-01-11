@@ -36,15 +36,10 @@ Check out the manual at: https://vcftools.github.io/man_latest.html
 
 ### Run vcftools on the data to estimate ![eq ](https://latex.codecogs.com/gif.latex?\large&space;\color{Magenta}\pi)
 ```
-#copy vcf from previous lesson
-cp /project/biol4585j-yey2sn/Files/Day_6/DGRP2_freeze2.2L.flt.thin.recode.vcf ./
-
 #run vcftools to estimate pi
 vcftools --vcf DGRP2_freeze2.2L.flt.thin.recode.vcf \
---window-pi 100000 \
+--window-pi 50000 \
 --window-pi-step 50000 \
---recode \
---recode-INFO-all \
 --out Calculate_pi
 ```
 
@@ -68,16 +63,39 @@ Lets chat about this estimator
 ### Run vcftools on the data to estimate D
 ```
 vcftools --vcf DGRP2_freeze2.2L.flt.thin.recode.vcf \
---window-pi 100000 \
---window-pi-step 50000 \
---recode \
---recode-INFO-all \
---out Calculate_pi
+--TajimaD 50000 \
+--out Calculate_D
 ```
 Lets look over the results
 
 
-## Activity: Plot ![eq ](https://latex.codecogs.com/gif.latex?\large&space;\color{Magenta}\pi) and D in R 
+## Activity << 30 points >>: Plot ![eq ](https://latex.codecogs.com/gif.latex?\large&space;\color{Magenta}\pi) and D in R 
 
-Using your knowledge of R, generate plot for $\pi$ and $D$ using the outputs of the analyses above. The x-axis should be the the nucleotide position and the y-axis should be statistic itself. What *geom_* object do you think better describes these data?
+Upload to R the two outputs from Pi and Taj. D. -- Once uploaded join the two datasets into one single datatset, using the left_join() function. You will have to create a shared column like this:
 
+```
+library(tidyverse, ...add correct lib.loc)
+library(data.table, ...add correct lib.loc)
+
+taj <- fread("Calculate_D.Tajima.D")
+taj %>% mutate(POS = BIN_START) -> taj_share
+pi <- fread("Calculate_pi.windowed.pi")
+pi %>% mutate(POS = BIN_START-1) -> pi_share
+
+left_join(taj_share[,c("POS","TajimaD")], pi_share[,c("POS","PI")], by = "POS") -> join_pi_taj
+
+```
+
+### Upload a document to Collab with the following Information. Include your name and the name of your partners. All margins must be 0.5 inches. ALL GRAPHS must be clearly labeled.
+
+1. Is there a correlation between these two variables? you can test correlations in R using the function cor.test(). Is the correlation statistically significant? Report estimates and p-values. [3 pts]
+
+3. What are the mean values for pi and Tajima's D [3 pts]
+
+4. Include two histogram, one for pi and another D (optional: you could test advanced skills by plotting them as a joint object!) [3 pts]. 
+
+5. Plots for pi and D using the outputs of the analyses above. The x-axis should be the the nucleotide position and the y-axis should be statistic itself. Choose the appropiate *geom_* art to accomplish this task? (consult your partner for this). [6 pts]
+
+6. Mutate a new variable to your dataset (call it "D_win") using the "case_when()" function which creates three categories of genomic window: a.when D <0, or b.when D >0. Using your knowledge of data summarization, report the mean and standard deviation values of pi, as a function of these three categories of Taj. D. [6 pts]
+
+7. Lastly, report the results of a test of whether the mean pi between these two categories of Taj D are statistically different from each other. [9 pts]
