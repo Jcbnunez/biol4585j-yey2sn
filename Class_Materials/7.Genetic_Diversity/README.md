@@ -96,6 +96,6 @@ left_join(taj_share[,c("POS","TajimaD")], pi_share[,c("POS","PI")], by = "POS") 
 
 5. Plots for pi and D using the outputs of the analyses above. The x-axis should be the the nucleotide position and the y-axis should be statistic itself. Choose the appropiate *geom_* art to accomplish this task? (consult your partner for this). [6 pts]
 
-6. Mutate a new variable to your dataset (call it "D_win") using the "case_when()" function which creates two categories of genomic window: a.when D <0, or b.when D >0. Using your knowledge of data summarization, report the mean and standard deviation values of pi, as a function of these three categories of Taj. D. [6 pts]
+6. Mutate a new variable to your dataset (call it "D_win") using the "case_when()" function which creates two categories of genomic window: a.when D <0, or b.when D >0. Using your knowledge of data summarization, report the mean and standard deviation values of pi, as a function of these two categories of Taj. D. [6 pts]
 
 7. Lastly, report the results of a test of whether the mean pi between these two categories of Taj D are statistically different from each other. [9 pts]
