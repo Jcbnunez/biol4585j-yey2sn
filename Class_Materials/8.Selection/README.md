@@ -71,7 +71,7 @@ Now lets, estimate pi
 ```
 vcftools --vcf hardsweep.vcf \
 --window-pi 50000 \
---window-pi-step 25000 \
+--window-pi-step 50000 \
 --out Calculate_pi_pos_sel
 ```
 
