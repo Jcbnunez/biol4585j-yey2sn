@@ -121,13 +121,13 @@ ggsave(faceted_plot, file = "faceted_plot.pdf")
 
 ```
 
-### Activity -- for 25 pts of participation
+### Written Activity -- for 100 pts 
 
 Submit in collab a written note answering the following question: 
 
-1. Based on the evidence seen in this graph, what type of evolutionary process is at play here? Why?
-2. What are potential alternative hypotheses to your proposition above? Why?
-3. Did the process that you proposed targeted the whole genome, or just a portion of the genome? If it targeted a portion of the genome, where? 
+1. Based on the evidence seen in this graph, what type of evolutionary process is at play here? Why? Full points will be given for a comprehensive justification.  [40 pts]
+2. What are potential alternative hypotheses to your proposition above? Why? Full points will be given for a comprehensive justification. [40 pts]
+3. Did the process that you proposed targeted the whole genome, or just a portion of the genome? If it targeted a portion of the genome, where? Full points will be given for an exact window, half credit for an approximation. [20 pts]
 
 
 ## Please use the reminder of class time to get a head start on the final project
