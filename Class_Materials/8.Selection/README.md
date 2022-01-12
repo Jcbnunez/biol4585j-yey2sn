@@ -84,4 +84,50 @@ vcftools --vcf hardsweep.vcf \
 
 ### Lets graph and discuss the results 
 
+```
+library(tidyverse, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+library(data.table, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
 
+taj <- fread("Calculate_taj_D_pos_sel.Tajima.D")
+taj %>% mutate(POS = BIN_START) -> taj_share
+pi <- fread("Calculate_pi_pos_sel.windowed.pi")
+pi %>% mutate(POS = BIN_START-1) -> pi_share
+
+left_join(taj_share[,c("POS","TajimaD")], pi_share[,c("POS","PI")], by = "POS") -> join_pi_taj
+
+```
+
+### Understand cast and melt functions in R
+
+![cast melt](http://www.studytrails.com/wp-content/uploads/2016/09/reshape.png)
+
+```
+library(reshape2, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
+
+join_pi_taj %>% 
+melt(id = "POS") ->
+join_molten
+```
+
+### Now lets graph using facets
+
+```
+join_molten %>%
+ggplot(aes(x= POS, y= value, color = variable)) +
+geom_line() +
+facet_wrap(~variable, ncol = 1, scales = "free_y") -> faceted_plot
+
+ggsave(faceted_plot, file = "faceted_plot.pdf")
+
+```
+
+### Activity -- for 25 pts of participation
+
+Submit in collab a written note answering the following question: 
+
+1. Based on the evidence seen in this graph, what type of evolutionary process is at play here? Why?
+2. What are potential alternative hypotheses to your proposition above? Why?
+3. Did the process that you proposed targeted the whole genome, or just a portion of the genome? If it targeted a portion of the genome, where? 
+
+
+## Please use the reminder of class time to get a head start on the final project
