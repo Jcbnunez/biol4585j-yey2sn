@@ -55,8 +55,8 @@ The basis of this test is to compare two different estimators of ![eq ](https://
 | Value of D 	| Driver                                           	| Neutral Interpretation                         	|
 |--------------	|--------------------------------------------------	|------------------------------------------------	|
 | D = 0      	| Observed variation similar to expected variation 	| Population evolving as per the null            	|
-| D < 0      	| Rare alleles abundant                            	| population expansion after a recent bottleneck 	|
-| D > 0      	| Rare alleles scarce                              	| sudden population contraction                  	|
+| D < 0      	| Rare alleles abundant                            	| population expansion after a recent bottleneck. Or, selective Sweep 	|
+| D > 0      	| Rare alleles scarce                              	| sudden population contraction. Or, balancing selection                  	|
 
 Lets chat about this estimator
 
