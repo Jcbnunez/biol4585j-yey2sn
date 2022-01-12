@@ -99,7 +99,7 @@ left_join(taj_share[,c("POS","TajimaD")], pi_share[,c("POS","PI")], by = "POS") 
 
 ### Understand cast and melt functions in R
 
-![cast melt](http://www.studytrails.com/wp-content/uploads/2016/09/reshape.png)
+![cast melt](https://uc-r.github.io/public/images/dataWrangling/gather1.png)
 
 ```
 library(reshape2, lib.loc = "/project/biol4585j-yey2sn/R/4.1.1/")
