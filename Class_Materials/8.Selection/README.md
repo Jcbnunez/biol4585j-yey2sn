@@ -123,7 +123,7 @@ ggsave(faceted_plot, file = "faceted_plot.pdf")
 
 ### Written Activity -- for 100 pts 
 
-Submit in collab a written note answering the following question: 
+Submit in collab a written note answering the following question. Please submit your responses in a word or PDF document with 1/2 inche margins on all sides.
 
 1. Based on the evidence seen in this graph, what type of evolutionary process is at play here? Why? Full points will be given for a comprehensive justification.  [40 pts]
 2. What are potential alternative hypotheses to your proposition above? Why? Full points will be given for a comprehensive justification. [40 pts]
